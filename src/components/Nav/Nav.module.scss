@@ -4,6 +4,7 @@
   position: fixed;
   top: 7rem;
   right: 0;
+
   height: 100vh;
   text-align: center;
   transform: translateX(100%);
@@ -40,7 +41,7 @@
           height: 100%;
           padding: 1rem;
           margin: 1rem;
-          font-size: 2rem;
+          font-size: 1rem;
         }
       }
     }
@@ -52,7 +53,7 @@
 
   &__container {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     padding: 1rem 0;
   }
@@ -91,14 +92,14 @@
 
 @media only screen and (min-width: 992px) {
   .nav {
-    height: 9rem;
+    height: 6rem;
     display: flex;
     flex-direction: row;
+    justify-content: flex-end;
     width: 100%;
-    justify-content: center;
     transform: none;
     top: 0;
-    background-color: rgba($grey-smooth, 0.9);
+    background-color: $primary-color;
     z-index: 1000;
 
     &__show {
@@ -120,28 +121,27 @@
     }
   }
 
-  .nav ul li a {
-    font-size: 2.4rem;
-  }
-
-  .four:hover .dropdown li {
-    animation: menu4 0.5s forwards;
-    transform-origin: top;
-  }
-  .nav__item {
+  .nav ul {
     display: flex;
-    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
   }
 
-  @keyframes menu4 {
-    from {
-      opacity: 0;
-      transform: scale(0.8) translateY(-1px);
-    }
+  .nav ul li {
+    padding: 0 1rem;
+    color: $white-smooth;
+    text-align: center;
+    cursor: pointer;
+  }
 
-    to {
-      opacity: 1;
-      transform: scale(1) translateY(0);
-    }
+  .nav ul li a {
+    text-decoration: none;
+    color: $white-smooth;
+    transition: color 0.3s ease;
+    font-size: 1rem;
+    font-weight: bold;
   }
 }
