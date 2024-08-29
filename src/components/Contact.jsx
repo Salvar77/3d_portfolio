@@ -6,6 +6,7 @@ import { styles } from "../styles";
 import { EarthCanvas } from "./canvas";
 import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
+import classes from "./Contact.module.scss"; // Import modułu SCSS
 
 const Contact = () => {
   const formRef = useRef();
@@ -23,56 +24,49 @@ const Contact = () => {
   };
 
   return (
-    <div className="xl:mt-12 xl:flex-row flex-col-reverse flex gap-10 overflow-hidden">
+    <div className={`${classes.contactContainer}`}>
       <motion.div
         variants={slideIn("left", "tween", 0.2, 1)}
-        className="flex-[0.75] bg-black-100 p-8 rounded-2xl"
+        className={classes.formContainer}
       >
         <p className={styles.sectionSubText}>Skontaktuj się</p>
         <h3 className={styles.sectionHeadText}>Kontakt.</h3>
 
-        <form
-          ref={formRef}
-          onSubmit={handleSubmit}
-          className="mt-12 flex flex-col gap-8"
-        >
-          <label className="flex flex-col">
-            <span className="text-white font-medium mb-4">Twoje Imię</span>
+        <form ref={formRef} onSubmit={handleSubmit} className={classes.form}>
+          <label className={classes.label}>
+            <span className={classes.labelText}>Twoje Imię</span>
             <input
               name="name"
               type="text"
               value={form.name}
               onChange={handleChange}
-              placeholder="Jakie jest twoje imię ?"
-              className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg border-none font-medium"
+              placeholder="Jakie jest twoje imię?"
+              className={classes.input}
             />
           </label>
-          <label className="flex flex-col">
-            <span className="text-white font-medium mb-4">Twój Email</span>
+          <label className={classes.label}>
+            <span className={classes.labelText}>Twój Email</span>
             <input
               name="email"
               type="email"
               value={form.email}
               onChange={handleChange}
-              placeholder="Jaki jest twój email ?"
-              className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg border-none font-medium"
+              placeholder="Jaki jest twój email?"
+              className={classes.input}
             />
           </label>
-          <label className="flex flex-col">
-            <span className="text-white font-medium mb-4">Twoja wiadomość</span>
+          <label className={classes.label}>
+            <span className={classes.labelText}>Twoja wiadomość</span>
             <textarea
               rows="7"
               name="message"
               value={form.message}
               onChange={handleChange}
-              placeholder="Co chcesz powiedzieć ?"
-              className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg border-none font-medium"
+              placeholder="Co chcesz powiedzieć?"
+              className={classes.textarea}
             />
           </label>
-          <button
-            type="submit"
-            className="bg-tertiary py-3 px-8 outline-none w-fit text-white font-bold shadow-md shadow-primary rounded-xl"
-          >
+          <button type="submit" className={classes.button}>
             {loading ? "Sending..." : "Send"}
           </button>
         </form>
@@ -80,7 +74,7 @@ const Contact = () => {
 
       <motion.div
         variants={slideIn("right", "tween", 0.2, 1)}
-        className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px]"
+        className={classes.canvasContainer}
       >
         <EarthCanvas />
       </motion.div>
