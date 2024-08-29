@@ -1,0 +1,139 @@
+@import "../styles/colors.scss";
+
+.navbar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 20px 16px;
+  position: fixed;
+  top: 0;
+  z-index: 20;
+  background-color: $primary-color;
+}
+
+.navbarContainer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logoImage {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+}
+
+.logoText {
+  color: $white-100;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+
+  &Span {
+    display: none;
+
+    @media (min-width: 640px) {
+      display: block;
+    }
+  }
+}
+
+.navLinks {
+  list-style: none;
+  display: none;
+  flex-direction: row;
+  gap: 40px;
+
+  @media (min-width: 640px) {
+    display: flex;
+  }
+}
+
+.navLinkItem {
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  color: $secondary-color;
+
+  &:hover {
+    color: $white-100;
+  }
+
+  &.active {
+    color: $white-100;
+  }
+}
+
+.menuToggleContainer {
+  display: flex;
+  flex: 1;
+  justify-content: flex-end;
+  align-items: center;
+
+  @media (min-width: 640px) {
+    display: none;
+  }
+}
+
+.menuIcon {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  cursor: pointer;
+}
+
+.menuDropdown {
+  padding: 24px;
+  background: $black-100;
+  background: linear-gradient(to right, #434343, #000000);
+  position: absolute;
+  top: 80px;
+  right: 0;
+  margin-left: 16px;
+  margin-right: 16px;
+  min-width: 140px;
+  z-index: 10;
+  border-radius: 12px;
+  display: none;
+  flex-direction: column;
+}
+
+.menuDropdown.flex {
+  display: flex;
+}
+
+.menuDropdown.hidden {
+  display: none;
+}
+
+.menuDropdownItem {
+  list-style: none;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  cursor: pointer;
+  color: $secondary-color;
+  margin-bottom: 16px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &:hover {
+    color: $white-100;
+  }
+
+  &.active {
+    color: $white-100;
+  }
+}

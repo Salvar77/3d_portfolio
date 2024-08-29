@@ -1,0 +1,68 @@
+@import "/styles/colors"; // Importuj plik ze zmiennymi kolorów
+
+.aboutContainer {
+  // .sectionSubText {
+  //   // Przenieś tutaj style, które były w `styles.sectionSubText` z TailwindCSS
+  // }
+
+  // .sectionHeadText {
+  //   // Przenieś tutaj style, które były w `styles.sectionHeadText` z TailwindCSS
+  // }
+
+  .description {
+    margin-top: 1rem;
+    color: $secondary-color;
+    font-size: 17px;
+    max-width: 768px;
+    line-height: 30px;
+  }
+
+  .serviceContainer {
+    margin-top: 5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+  }
+
+  .serviceCard {
+    width: 100%;
+    @media (min-width: 480px) {
+      width: 250px;
+    }
+
+    .gradientBorder {
+      padding: 1px;
+      border-radius: 20px;
+      background: linear-gradient(
+        90.13deg,
+        #00cea8 1.9%,
+        #0077ff 97.5%
+      ); /* Zamieniony gradient na zielono-niebieski, bez różowych tonów */
+      box-shadow: $card-shadow;
+
+      .cardContent {
+        background-color: $tertiary-color;
+        border-radius: 20px;
+        padding: 1.25rem 3rem;
+        min-height: 280px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column;
+
+        img {
+          width: 4rem;
+          height: 4rem;
+          object-fit: contain;
+        }
+
+        h3 {
+          color: $white-100;
+          font-size: 20px;
+          font-weight: bold;
+          text-align: center;
+        }
+      }
+    }
+  }
+}

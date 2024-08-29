@@ -126,6 +126,94 @@
   transform: translateZ(0);
 }
 
+.hero-head-text {
+  font-weight: 900;
+  color: white;
+  font-size: 40px;
+  line-height: 98px;
+  margin-top: 0.5rem;
+}
+
+@media (min-width: 640px) {
+  .hero-head-text {
+    font-size: 50px;
+  }
+}
+
+@media (min-width: 768px) {
+  .hero-head-text {
+    font-size: 60px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-head-text {
+    font-size: 80px;
+  }
+}
+
+.hero-sub-text {
+  color: #dfd9ff;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 40px;
+}
+
+@media (min-width: 640px) {
+  .hero-sub-text {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 768px) {
+  .hero-sub-text {
+    font-size: 26px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-sub-text {
+    font-size: 30px;
+  }
+}
+
+.section-head-text {
+  color: white;
+  font-weight: 900;
+  font-size: 30px;
+}
+
+@media (min-width: 640px) {
+  .section-head-text {
+    font-size: 40px;
+  }
+}
+
+@media (min-width: 768px) {
+  .section-head-text {
+    font-size: 50px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section-head-text {
+    font-size: 60px;
+  }
+}
+
+.section-sub-text {
+  color: var(--secondary-color); /* Dodaj odpowiedni kolor lub zmienną CSS */
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 14px;
+}
+
+@media (min-width: 640px) {
+  .section-sub-text {
+    font-size: 18px;
+  }
+}
+
 @keyframes mulShdSpin {
   0%,
   100% {

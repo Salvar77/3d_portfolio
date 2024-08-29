@@ -3,6 +3,7 @@ import { styles } from "../styles";
 import { SectionWrapper } from "../hoc";
 import { fadeIn, textVariant } from "../utils/motion";
 import { testimonials } from "../constants";
+import classes from "./Feedbacks.module.scss";
 
 const FeedbackCard = ({
   index,
@@ -14,25 +15,25 @@ const FeedbackCard = ({
 }) => (
   <motion.div
     variants={fadeIn("", "", index * 0.5, 0.75)}
-    className="bg-black-200 p-10 rounded-3xl xs:w-[320px] w-full "
+    className={classes.feedbackCard}
   >
-    <p className="text-white font-black text-[48px]">"</p>
-    <div className="mt-1">
-      <p className="text-white tracking-wider text-[18px]">{testimonial}</p>
+    <p className={classes.feedbackQuote}>"</p>
+    <div className={classes.feedbackText}>
+      <p>{testimonial}</p>
 
-      <div className="mt-7 flex justify-between items-center gap-1">
-        <div className="flex-1 flex flex-col">
-          <p className="text-white font-medium text-[16px]">
-            <span className="blue-text-gradient">@</span> {name}
+      <div className={classes.feedbackInfo}>
+        <div className={classes.feedbackUserInfo}>
+          <p className={classes.feedbackUserName}>
+            <span className={classes.blueTextGradient}>@</span> {name}
           </p>
-          <p className="mt-1 text-secondary text-[12px]">
+          <p className={classes.feedbackUserDesignation}>
             {designation} of {company}
           </p>
         </div>
         <img
           src={image}
           alt={`feedback-by-${name}`}
-          className="w-10 h-10 rounded-full object-cover"
+          className={classes.feedbackUserImage}
         />
       </div>
     </div>
@@ -41,16 +42,14 @@ const FeedbackCard = ({
 
 const Feedbacks = () => {
   return (
-    <div className="mt-12 bg-black-100 rounded-[20px]">
-      <div
-        className={`${styles.padding} bg-tertiary rounded-2xl min-h-[300px]`}
-      >
+    <div className={classes.feedbackContainer}>
+      <div className={`${styles.padding} ${classes.feedbackHeader}`}>
         <motion.div variants={textVariant()}>
           <p className={styles.sectionSubText}>Co mówią inni</p>
           <h2 className={styles.sectionHeadText}>Referencje</h2>
         </motion.div>
       </div>
-      <div className={`${styles.paddingX} -mt-20 pb-14 flex flex-wrap gap-7`}>
+      <div className={`${styles.paddingX} ${classes.feedbackContent}`}>
         {testimonials.map((testimonial, index) => (
           <FeedbackCard key={testimonial.name} index={index} {...testimonial} />
         ))}

@@ -4,10 +4,10 @@ import {
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 import { motion } from "framer-motion";
-
 import "react-vertical-timeline-component/style.min.css";
 
 import { styles } from "../styles";
+import classes from "./Experience.module.scss";
 import { experiences } from "../constants";
 import { SectionWrapper } from "../hoc";
 import { textVariant } from "../utils/motion";
@@ -19,29 +19,24 @@ const ExperienceCard = ({ experience }) => (
     date={experience.date}
     iconStyle={{ background: experience.iconBg }}
     icon={
-      <div>
+      <div className={classes.experienceIconContainer}>
         <img
           src={experience.icon}
           alt={experience.company_name}
-          className="w-[60%] h-[60%] object-contain"
+          className={classes.experienceIcon}
         />
       </div>
     }
   >
     <div>
-      <h3 className="text-white text-[24px] font-bold">{experience.title}</h3>
-      <p
-        className="text-secondary text-[16px] font-semibold"
-        style={{ margin: 0 }}
-      >
-        {experience.company_name}
-      </p>
+      <h3 className={classes.experienceTitle}>{experience.title}</h3>
+      <p className={classes.experienceCompany}>{experience.company_name}</p>
     </div>
-    <ul className="mt-5 list-disc ml-5 space-y-2">
+    <ul className={classes.experienceList}>
       {experience.points.map((point, index) => (
         <li
           key={`experience-point-${index}`}
-          className="text-white-100 text-[14px] pl-1 tracking-wider"
+          className={classes.experienceListItem}
         >
           {point}
         </li>
@@ -58,7 +53,7 @@ const Experience = () => {
         <h2 className={styles.sectionHeadText}>Doświadczenie Zawodowe</h2>
       </motion.div>
 
-      <div className="mt-2 flex flex-col">
+      <div className={classes.experienceContainer}>
         <VerticalTimeline>
           {experiences.map((experience, index) => (
             <ExperienceCard key={index} experience={experience} />

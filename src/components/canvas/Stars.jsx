@@ -1,7 +1,8 @@
-import { useState, useRef, Suspenses, Suspense } from "react";
+import { useRef, Suspense } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { Points, PointMaterial, Preload } from "@react-three/drei";
 import * as random from "maath/random/dist/maath-random.esm";
+import classes from "./Stars.module.scss";
 
 const Stars = (props) => {
   const ref = useRef();
@@ -30,7 +31,7 @@ const Stars = (props) => {
 
 const StarsCanvas = () => {
   return (
-    <div className="w-full h-full absolute inset-0 z-[-1]">
+    <div className={classes.starsCanvas}>
       <Canvas camera={{ position: [0, 0, 1] }}>
         <Suspense fallback={null}>
           <Stars />

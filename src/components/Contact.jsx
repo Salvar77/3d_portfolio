@@ -21,6 +21,7 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
   };
+
   return (
     <div className="xl:mt-12 xl:flex-row flex-col-reverse flex gap-10 overflow-hidden">
       <motion.div
