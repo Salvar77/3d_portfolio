@@ -12,6 +12,7 @@
   width: 60%;
   height: 60%;
   object-fit: contain;
+  // background-color: $violet-1;
 }
 
 .experienceTitle {
@@ -45,4 +46,224 @@
   margin-top: 8px;
   display: flex;
   flex-direction: column;
+}
+
+.experienceDescription {
+  p {
+    font-size: 4rem;
+  }
+}
+
+.imageOverlay {
+  text-decoration: none;
+  color: $white-smooth;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.uiBtn {
+  --btn-default-bg: rgb(41, 41, 41);
+  --btn-padding: 15px 20px;
+  --btn-hover-bg: rgb(51, 51, 51);
+  --btn-transition: 0.3s;
+  --btn-letter-spacing: 0.1rem;
+  --btn-animation-duration: 1.2s;
+  --btn-shadow-color: rgba(0, 0, 0, 0.137);
+  --btn-shadow: 0 2px 10px 0 var(--btn-shadow-color);
+  --hover-btn-color: #cfb53b;
+  --default-btn-color: #fff;
+  --font-size: 16px;
+
+  --font-weight: 600;
+  --font-family: Menlo, Roboto Mono, monospace;
+  border-radius: 0.4rem;
+  z-index: 1;
+}
+
+.modal {
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+
+  align-items: center;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.modalContent {
+  background-color: $grey-smooth-5;
+  margin: auto;
+  padding: 3rem;
+  border-radius: 0.4rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  width: 80%;
+  background-color: rgba($grey-smooth-5, 0.9);
+  box-shadow: 0.2rem 0.4rem 2rem 0.2rem;
+  max-width: 600px;
+  position: relative;
+
+  animation: slideIn 0.4s ease-in-out;
+}
+
+.close {
+  color: $grey-smooth-2;
+  font-size: 20px;
+  font-weight: bold;
+  position: absolute;
+  right: 9px;
+  top: 3px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+
+  &:focus,
+  &:active {
+    outline: none;
+    color: $red-main;
+  }
+
+  @media screen and (min-width: 992px) {
+    top: 0;
+    font-size: 28px;
+  }
+}
+
+.close:hover,
+.close:focus {
+  color: $red-main;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modalImage {
+  width: 100%;
+  height: 100%;
+}
+
+.uiBtn {
+  box-sizing: border-box;
+  padding: var(--btn-padding);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--default-btn-color);
+  font: var(--font-weight) var(--font-size) var(--font-family);
+  background: var(--btn-default-bg);
+  border: none;
+  cursor: pointer;
+  transition: var(--btn-transition);
+  overflow: hidden;
+  box-shadow: var(--btn-shadow);
+}
+
+.uiBtn span {
+  letter-spacing: var(--btn-letter-spacing);
+  transition: var(--btn-transition);
+  box-sizing: border-box;
+  position: relative;
+  background: inherit;
+}
+
+.uiBtn span::before {
+  box-sizing: border-box;
+  position: absolute;
+  content: "";
+  background: inherit;
+}
+
+.uiBtn:hover,
+.uiBtn:focus {
+  background: var(--btn-hover-bg);
+}
+
+.uiBtn:hover span,
+.uiBtn:focus span {
+  color: var(--hover-btn-color);
+}
+
+.uiBtn:hover span::before,
+.uiBtn:focus span::before {
+  animation: chitchat linear both var(--btn-animation-duration);
+}
+
+@keyframes chitchat {
+  0% {
+    content: "#";
+  }
+  5% {
+    content: ".";
+  }
+  10% {
+    content: "^{";
+  }
+  15% {
+    content: "-!";
+  }
+  20% {
+    content: "#$_";
+  }
+  25% {
+    content: "№:0";
+  }
+  30% {
+    content: "'{+.'";
+  }
+  35% {
+    content: "'@}-?'";
+  }
+  40% {
+    content: "?{4@%";
+  }
+  45% {
+    content: "=.,^!";
+  }
+  50% {
+    content: "?2@%";
+  }
+  55% {
+    content: "\\;1}]";
+  }
+  60% {
+    content: "?{%:%";
+    right: 0;
+  }
+  65% {
+    content: "|{f[4";
+    right: 0;
+  }
+  70% {
+    content: "'4%0%'";
+    right: 0;
+  }
+  75% {
+    content: "'1_0<";
+    right: 0;
+  }
+  80% {
+    content: "'0%'";
+    right: 0;
+  }
+  85% {
+    content: "]>'";
+    right: 0;
+  }
+  90% {
+    content: "4";
+    right: 0;
+  }
+  95% {
+    content: "2";
+    right: 0;
+  }
+  100% {
+    content: "";
+    right: 0;
+  }
 }

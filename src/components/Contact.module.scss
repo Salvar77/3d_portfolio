@@ -3,12 +3,16 @@
 .contactContainer {
   display: flex;
   flex-direction: column-reverse;
+  flex-wrap: wrap;
   gap: 10px;
   overflow: hidden;
 
   @media (min-width: 1280px) {
-    flex-direction: row;
-    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    // grid-template-rows: auto auto;
+    gap: 20px;
+    align-items: center;
   }
 }
 
@@ -17,6 +21,8 @@
   background-color: $black-100;
   padding: 2rem;
   border-radius: 1.25rem;
+  grid-column: 1 / 2;
+  grid-row: 1;
 }
 
 .form {
@@ -35,6 +41,9 @@
   color: $white-100;
   font-weight: 500;
   margin-bottom: 1rem;
+}
+.textarea {
+  height: 125px;
 }
 
 .input,
@@ -60,10 +69,89 @@
   font-weight: bold;
   box-shadow: 0 4px 6px -1px $primary-color;
   border-radius: 0.75rem;
+  width: 100%;
+}
+
+.consentWrapper {
+  padding: 0.5rem;
+  margin: 0.5rem;
+  text-align: center;
+  font-size: 1rem;
+  border: 1px solid rgba(61, 54, 54, 0.9);
+  box-shadow: 0.3rem 0.4rem 0.8rem rgba(235, 232, 232, 0.1);
+
+  input[type="checkbox"]:checked {
+    background-color: $blue-after;
+  }
+
+  label {
+    display: inline-block;
+    margin-left: 0.5rem;
+    font-size: 0.5rem;
+    color: $white-100;
+  }
+}
+
+.policy {
+  color: $white-smooth;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1rem;
+  justify-content: center;
+  // border: 1px solid rgba(61, 54, 54, 0.2);
+  box-shadow: 0.3rem 0.4rem 0.8rem rgba(235, 232, 232, 0.1);
+  padding: 1rem;
+  margin-bottom: 0.4rem;
+  text-align: center;
+
+  &__link {
+    text-decoration: none;
+    color: $violet-1;
+  }
+  span {
+    font-weight: bold;
+  }
+}
+
+.successMessage,
+.errorMessage {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $white-smooth;
+  font-size: 2rem;
+  text-align: center;
+  z-index: 1050;
+  padding: 2rem;
+}
+
+.successMessage {
+  font-size: 1rem;
+  background-color: rgba(34, 139, 34, 0.9);
+
+  @media (min-width: 992px) {
+    font-size: 1.7rem;
+  }
+}
+
+.errorMessage {
+  font-size: 1rem;
+  background-color: rgba(220, 20, 60, 0.9);
+
+  @media (min-width: 992px) {
+    font-size: 1.7rem;
+  }
 }
 
 .canvasContainer {
   height: 350px;
+  width: 100%;
 
   @media (min-width: 768px) {
     height: 550px;
@@ -71,6 +159,19 @@
 
   @media (min-width: 1280px) {
     flex: 1;
-    height: auto;
+    // height: 850px;
+    height: 91%;
+  }
+}
+
+.mapWrapper {
+  grid-column: 1 / 3;
+  grid-row: 2;
+  width: calc(100vw - 0.2rem);
+  margin-left: calc(-50vw + 50%);
+  margin-top: 2rem;
+  padding: 2rem;
+  @media screen and (min-width: 1280px) {
+    padding: 0.1rem;
   }
 }

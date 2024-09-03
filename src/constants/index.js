@@ -23,20 +23,29 @@ import {
   jobit,
   tripguide,
   threejs,
+  kabe,
+  seasun,
+  fazar,
+  logo2,
+  fazar2,
+  stripe,
+  Ai,
+  Ai2,
+  Ps,
 } from "../assets";
 
 export const navLinks = [
   {
     id: "about",
-    title: "About",
+    title: "O mnie",
   },
   {
     id: "work",
-    title: "Work",
+    title: "Realizacje",
   },
   {
     id: "contact",
-    title: "Contact",
+    title: "Kontakt",
   },
 ];
 
@@ -73,8 +82,8 @@ const technologies = [
     icon: javascript,
   },
   {
-    name: "TypeScript",
-    icon: typescript,
+    name: "Stripe",
+    icon: stripe,
   },
   {
     name: "React JS",
@@ -105,12 +114,38 @@ const technologies = [
     icon: git,
   },
   {
-    name: "figma",
-    icon: figma,
+    name: "Adobe Illustrator",
+    icon: Ai2,
   },
   {
-    name: "docker",
-    icon: docker,
+    name: "Adobe Photoshop",
+    icon: Ps,
+  },
+];
+
+const realizations = [
+  {
+    title: "Kabe Tint&Leather",
+    icon: logo2,
+    description:
+      "Usługi przyciemniania szyb samochodowych i regeneracji tapicerki skórzanej.",
+    image: kabe,
+    link: "https://www.kabetintleather.pl/",
+  },
+  {
+    title: "Sea & Sun Sarbinowo",
+    icon: logo2,
+    description: "Nowo wybudowane, klimatyzowane, komfortowe domki na wynajem.",
+    image: seasun,
+    link: "https://www.seasunsarbinowo.pl/",
+  },
+  {
+    title: "Fazar",
+    icon: logo2,
+    description: "Wizytówka dla usług elektrycznych i teletechnicznych.",
+    image: fazar,
+    modals: fazar2,
+    link: "#",
   },
 ];
 
@@ -262,4 +297,11 @@ const projects = [
   },
 ];
 
-export { services, technologies, experiences, testimonials, projects };
+export {
+  services,
+  technologies,
+  experiences,
+  testimonials,
+  projects,
+  realizations,
+};

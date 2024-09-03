@@ -1,4 +1,5 @@
 import logo from "./logo3.svg";
+import logo2 from "./logo1.svg";
 import backend from "./backend.png";
 import creator from "./creator.png";
 import mobile from "./mobile.png";
@@ -20,11 +21,19 @@ import redux from "./tech/redux.png";
 import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
+import stripe from "./tech/StripeLogoRed.svg";
+import Ai from "./tech/Ai.png";
+import Ai2 from "./tech/Ai2.png";
+import Ps from "./tech/Ps.png";
 
 import meta from "./company/meta.png";
 import shopify from "./company/shopify.png";
 import starbucks from "./company/starbucks.png";
 import tesla from "./company/tesla.png";
+import kabe from "./company/hero2_640.jpg";
+import seasun from "./company/seasun.jpg";
+import fazar from "./company/FazarSvg.webp";
+import fazar2 from "./company/vcardSvg.svg";
 
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
@@ -56,6 +65,15 @@ export {
   shopify,
   starbucks,
   tesla,
+  kabe,
+  seasun,
+  fazar,
+  fazar2,
+  logo2,
+  stripe,
+  Ai,
+  Ai2,
+  Ps,
   carrent,
   jobit,
   tripguide,

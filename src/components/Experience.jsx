@@ -1,65 +1,131 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import {
   VerticalTimeline,
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
-import { motion } from "framer-motion";
+import classes from "./Experience.module.scss";
 import "react-vertical-timeline-component/style.min.css";
 
+import { motion } from "framer-motion";
 import { styles } from "../styles";
-import classes from "./Experience.module.scss";
-import { experiences } from "../constants";
+import { realizations, experiences } from "../constants";
 import { SectionWrapper } from "../hoc";
 import { textVariant } from "../utils/motion";
+import { Link } from "react-router-dom";
+import vcardFazar from "../assets/company/vcardSvg.svg";
 
-const ExperienceCard = ({ experience }) => (
+const ExperienceCard = ({ realization, openModal }) => (
   <VerticalTimelineElement
     contentStyle={{ background: "#1d1836", color: "#fff" }}
     contentArrowStyle={{ borderRight: "7px solid #232631" }}
-    date={experience.date}
-    iconStyle={{ background: experience.iconBg }}
+    date={realization.date}
+    iconStyle={{ background: realization.iconBg }}
     icon={
       <div className={classes.experienceIconContainer}>
         <img
-          src={experience.icon}
-          alt={experience.company_name}
+          src={experiences.icon}
+          alt={experiences.title}
           className={classes.experienceIcon}
         />
       </div>
     }
   >
     <div>
-      <h3 className={classes.experienceTitle}>{experience.title}</h3>
-      <p className={classes.experienceCompany}>{experience.company_name}</p>
+      <h3 className={classes.experienceTitle}>{realization.title}</h3>
+      <p className={classes.experienceCompany}>{realization.company_name}</p>
     </div>
-    <ul className={classes.experienceList}>
-      {experience.points.map((point, index) => (
-        <li
-          key={`experience-point-${index}`}
-          className={classes.experienceListItem}
+    <div className={classes.realizations__boxImg}>
+      <img
+        className={classes.realizations__img}
+        src={realization.image}
+        alt={`Zdjęcie ${realization.title}`}
+      />
+      {realization.title === "Fazar" ? (
+        <button
+          className={`${classes.uiBtn} ${classes.imageOverlay}`}
+          onClick={openModal}
         >
-          {point}
-        </li>
-      ))}
-    </ul>
+          <span>Przejdź</span>
+        </button>
+      ) : realization.link.startsWith("/") ? (
+        <Link
+          to={realization.link}
+          className={`${classes.uiBtn} ${classes.imageOverlay}`}
+        >
+          <span>Przejdź</span>
+        </Link>
+      ) : (
+        <a
+          href={realization.link}
+          className={`${classes.uiBtn} ${classes.imageOverlay}`}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span>Przejdź</span>
+        </a>
+      )}
+    </div>
+    <div className={classes.experienceDescription}>
+      <p>{realization.description}</p>
+    </div>
   </VerticalTimelineElement>
 );
 
 const Experience = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
+
+  useEffect(() => {
+    if (isModalOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+  }, [isModalOpen]);
+
   return (
     <>
       <motion.div variants={textVariant()}>
-        <p className={styles.sectionSubText}>Jakie projekty zostały wykonane</p>
-        <h2 className={styles.sectionHeadText}>Doświadczenie Zawodowe</h2>
+        <p className={styles.sectionSubText}>Zrealizowane Projekty</p>
+        <h2 className={styles.sectionHeadText}>Realizacje</h2>
       </motion.div>
 
       <div className={classes.experienceContainer}>
         <VerticalTimeline>
-          {experiences.map((experience, index) => (
-            <ExperienceCard key={index} experience={experience} />
+          {realizations.map((realization, index) => (
+            <ExperienceCard
+              key={index}
+              realization={realization}
+              openModal={realization.title === "Fazar" ? openModal : null}
+            />
           ))}
         </VerticalTimeline>
       </div>
+
+      {isModalOpen && (
+        <div className={classes.modal} onClick={closeModal}>
+          <div
+            className={classes.modalContent}
+            onClick={(e) => e.stopPropagation()}
+          >
+            <span className={classes.close} onClick={closeModal}>
+              <i className="fa fa-times"></i>
+            </span>
+            <img
+              src={vcardFazar}
+              alt="Wizytówka Fazar"
+              className={classes.modalImage}
+            />
+          </div>
+        </div>
+      )}
     </>
   );
 };

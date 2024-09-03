@@ -1,27 +1,22 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { navLinks } from "../../constants";
 import classes from "./Nav.module.scss";
 
 const Nav = ({ isOpen, toggleNav }) => {
-  let navClasses = classes.nav;
-
-  const [windowWidth, setWindowWidth] = useState(undefined);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [active, setActive] = useState("");
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleResize = () => {
       setWindowWidth(window.innerWidth);
     };
 
-    handleResize();
-
     window.addEventListener("resize", handleResize);
 
     return () => window.removeEventListener("resize", handleResize);
   }, []);
-
-  if (isOpen) {
-    navClasses = `${classes.nav} ${classes.nav__show}`;
-  }
 
   const handleToggleNav = () => {
     if (windowWidth < 992) {
@@ -29,25 +24,40 @@ const Nav = ({ isOpen, toggleNav }) => {
     }
   };
 
+  const handleNavLinkClick = (link) => {
+    setActive(link.title);
+    handleToggleNav();
+
+    // Nawigacja do strony głównej
+    navigate("/");
+
+    // Przewijanie do sekcji po nawigacji
+    setTimeout(() => {
+      const section = document.getElementById(link.id);
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth" });
+      }
+    }, 100); // Czekanie, aby zapewnić pełne załadowanie strony
+  };
+
+  const navClasses = `${classes.nav} ${isOpen ? classes.nav__show : ""}`;
+
   return (
     <nav className={navClasses}>
       <div className={classes.nav__container}>
-        <div className={classes.nav__items}>
-          <ul aria-hidden="true" className={classes.nav__item}>
-            <li onClick={handleToggleNav}>
-              <Link to="/#O-mnie">O mnie</Link>
+        <ul className={classes.nav__item}>
+          {navLinks.map((link) => (
+            <li
+              key={link.id}
+              className={`${active === link.title ? classes.active : ""}`}
+              onClick={() => handleNavLinkClick(link)}
+            >
+              <Link to="/" className={classes.navLinkItem}>
+                {link.title}
+              </Link>
             </li>
-            <li onClick={handleToggleNav}>
-              <Link to="/#realizacje">Realizacje</Link>
-            </li>
-            <li onClick={handleToggleNav}>
-              <Link to="/#projekty">Projekty</Link>
-            </li>
-            <li onClick={handleToggleNav}>
-              <Link to="/#kontakt">Kontakt</Link>
-            </li>
-          </ul>
-        </div>
+          ))}
+        </ul>
       </div>
     </nav>
   );

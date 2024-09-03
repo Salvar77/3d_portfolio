@@ -41,9 +41,9 @@ const About = () => {
         variants={fadeIn("", "", 0.1, 1)}
         className={classes.description}
       >
-        Jestem Łukasz. Web Developmentem zajmuje się od Września 2022 roku, a
-        firma Search IT zajmuje się tworzeniem stron WWW, oraz e-sklepów,
-        dostosowanych do potrzeb Twojej firmy.
+        Nazywam się Łukasz i jestem Full-Stack Developerem. Reprezentuję firmę
+        Search IT, która specjalizuje się w projektowaniu funkcjonalnych stron
+        WWWW oraz sklepów internetowych dostosowanych do potrzeb Twojej firmy.
       </motion.p>
 
       <div className={classes.serviceContainer}>
