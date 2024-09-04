@@ -32,6 +32,9 @@ import {
   Ai,
   Ai2,
   Ps,
+  eadmin,
+  efront,
+  universe,
 } from "../assets";
 
 export const navLinks = [
@@ -42,6 +45,10 @@ export const navLinks = [
   {
     id: "work",
     title: "Realizacje",
+  },
+  {
+    id: "projects",
+    title: "Projekty",
   },
   {
     id: "contact",
@@ -233,9 +240,9 @@ const testimonials = [
 
 const projects = [
   {
-    name: "Car Rent",
+    name: "ecommerceAdmin",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      "Strona administracyjna e-commerce, stworzona z wykorzystaniem technologii React i NextJS, zaprojektowana do zarządzania sklepem internetowym. Dzięki zastosowaniu tych nowoczesnych narzędzi, platforma zapewnia płynną nawigację oraz szybkie ładowanie stron, co przekłada się na lepsze doświadczenie użytkownika podczas zarządzania produktami, zamówieniami i innymi funkcjami sklepu.",
     tags: [
       {
         name: "react",
@@ -246,24 +253,45 @@ const projects = [
         color: "green-text-gradient",
       },
       {
-        name: "tailwind",
+        name: "aws",
         color: "pink-text-gradient",
       },
     ],
-    image: carrent,
-    source_code_link: "https://github.com/",
+    image: eadmin,
+    source_code_link: "https://github.com/Salvar77/elogistik-admin",
   },
   {
-    name: "Job IT",
+    name: "ecommerceFront",
     description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+      "Strona e-commerce, zbudowana przy użyciu React, NextJS oraz Stripe, pozwala użytkownikom na przeglądanie produktów, dodawanie ich do koszyka oraz dokonywanie zakupów. Dzięki Stripe płatności są szybkie i bezpieczne, co zwiększa komfort klientów. Zastosowanie React i NextJS gwarantuje płynną nawigację oraz efektywne działanie strony, co wpływa na pozytywne doświadczenie zakupowe.",
     tags: [
       {
         name: "react",
         color: "blue-text-gradient",
       },
       {
-        name: "restapi",
+        name: "stripe",
+        color: "green-text-gradient",
+      },
+      {
+        name: "nextjs",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: efront,
+    source_code_link: "https://github.com/Salvar77/elogistik-front",
+  },
+  {
+    name: "Universe Explorer",
+    description:
+      "Strona internetowa stworzona przy użyciu HTML, SCSS oraz JavaScript, będąca moim pierwszym projektem. Projekt ten to klasyczna, statyczna witryna, która pozwala na podstawową interakcję użytkownika i prezentację treści. Dzięki zastosowaniu SCSS udało się uzyskać lepszą organizację stylów, a JavaScript dodaje podstawową funkcjonalność, co sprawia, że strona jest dynamiczna i bardziej interaktywna.",
+    tags: [
+      {
+        name: "javascript",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "html",
         color: "green-text-gradient",
       },
       {
@@ -271,29 +299,8 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: jobit,
-    source_code_link: "https://github.com/",
-  },
-  {
-    name: "Trip Guide",
-    description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
-    tags: [
-      {
-        name: "nextjs",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "supabase",
-        color: "green-text-gradient",
-      },
-      {
-        name: "css",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: tripguide,
-    source_code_link: "https://github.com/",
+    image: universe,
+    source_code_link: "https://github.com/Salvar77/Universe",
   },
 ];
 

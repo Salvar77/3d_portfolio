@@ -13,7 +13,8 @@ import {
 import Nav from "./components/Nav/Nav";
 import BurgerMenu from "./components/Nav/BurgerMenu";
 import Logo from "./components/Nav/Logo";
-import PrivacyPolicy from "./components/Legal/PrivacyPolicy"; // Import komponentu Polityki Prywatności
+import Footer from "./components/Footer/Footer";
+import PrivacyPolicy from "./components/Legal/PrivacyPolicy";
 
 const App = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -39,7 +40,6 @@ const App = () => {
   return (
     <BrowserRouter>
       <div className="relative z-0 bg-primary">
-        {/* Umieszczenie elementów wspólnych jak Nav i Logo */}
         <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
           <Logo showLogo={showLogo} />
           <Nav isOpen={isOpen} toggleNav={toggleNav} />
@@ -47,7 +47,6 @@ const App = () => {
         </div>
 
         <Routes>
-          {/* Strona główna */}
           <Route
             path="/"
             element={
@@ -57,7 +56,7 @@ const App = () => {
                 <Experience />
                 <Tech />
                 <Works />
-                <Feedbacks />
+
                 <div className="relative z-0">
                   <Contact />
                   <StarsCanvas />
@@ -65,10 +64,10 @@ const App = () => {
               </>
             }
           />
-
-          {/* Strona Polityki Prywatności */}
           <Route path="/legal" element={<PrivacyPolicy />} />
         </Routes>
+
+        <Footer />
       </div>
     </BrowserRouter>
   );

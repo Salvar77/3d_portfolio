@@ -38,6 +38,9 @@ import fazar2 from "./company/vcardSvg.svg";
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
+import eadmin from "./image1.png";
+import efront from "./efinal1.png";
+import universe from "./universe.jpg";
 
 export {
   logo,
@@ -77,4 +80,7 @@ export {
   carrent,
   jobit,
   tripguide,
+  eadmin,
+  efront,
+  universe,
 };

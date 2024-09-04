@@ -28,16 +28,14 @@ const Nav = ({ isOpen, toggleNav }) => {
     setActive(link.title);
     handleToggleNav();
 
-    // Nawigacja do strony głównej
     navigate("/");
 
-    // Przewijanie do sekcji po nawigacji
     setTimeout(() => {
       const section = document.getElementById(link.id);
       if (section) {
         section.scrollIntoView({ behavior: "smooth" });
       }
-    }, 100); // Czekanie, aby zapewnić pełne załadowanie strony
+    }, 100);
   };
 
   const navClasses = `${classes.nav} ${isOpen ? classes.nav__show : ""}`;
