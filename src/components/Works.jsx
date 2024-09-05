@@ -61,7 +61,7 @@ const Works = () => {
   return (
     <>
       <motion.div id="projects" variants={textVariant()}>
-        <p className={styles.sectionSubText}>Moja praca</p>
+        <p className={styles.sectionSubText}>Wykonane Prace</p>
         <h2 className={styles.sectionHeadText}>Projekty.</h2>
       </motion.div>
       <div>
