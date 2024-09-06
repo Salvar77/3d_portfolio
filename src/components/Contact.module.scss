@@ -5,7 +5,7 @@
   flex-direction: column-reverse;
   flex-wrap: wrap;
   gap: 10px;
-  overflow: hidden;
+  overflow-x: hidden;
 
   @media (min-width: 1280px) {
     display: grid;
@@ -54,6 +54,7 @@
   border-radius: 0.5rem;
   border: none;
   font-weight: 500;
+  width: 100%;
 
   &::placeholder {
     color: $secondary-color;
@@ -174,22 +175,5 @@
     width: 99.45vw;
     margin-left: calc(-50vw + 50%);
     padding: 0.1rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .contactContainer {
-    align-items: center;
-  }
-
-  .formContainer,
-  .canvasContainer {
-    width: 100%;
-    max-width: 100vw;
-  }
-
-  .mapWrapper {
-    width: 100%;
-    margin-left: 0;
   }
 }
