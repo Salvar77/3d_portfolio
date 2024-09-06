@@ -176,3 +176,20 @@
     padding: 0.1rem;
   }
 }
+
+@media (max-width: 768px) {
+  .contactContainer {
+    align-items: center;
+  }
+
+  .formContainer,
+  .canvasContainer {
+    width: 100%;
+    max-width: 100vw;
+  }
+
+  .mapWrapper {
+    width: 100%;
+    margin-left: 0;
+  }
+}
