@@ -1,8 +1,10 @@
-import React from "react";
+import React, { lazy, Suspense } from "react";
 import { motion } from "framer-motion";
 import classes from "./Hero.module.scss";
 import { styles } from "../styles";
-import { ComputersCanvas } from "./canvas";
+
+// Lazy load the ComputersCanvas component
+const ComputersCanvas = lazy(() => import("./canvas/Computers"));
 
 const Hero = () => {
   return (
@@ -22,8 +24,9 @@ const Hero = () => {
           </p>
         </div>
       </div>
-      <ComputersCanvas />
-
+      <Suspense fallback={<div>Loading 3D Model...</div>}>
+        <ComputersCanvas />
+      </Suspense>
       <div className={classes.scrollContainer}>
         <a href="#about">
           <div className={classes.scrollLink}>

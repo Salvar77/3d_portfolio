@@ -1,15 +1,19 @@
-import React from "react";
-import { BallCanvas } from "./canvas";
+import React, { lazy, Suspense } from "react";
 import { SectionWrapper } from "../hoc";
 import { technologies } from "../constants";
-import classes from "./Tech.module.scss"; // Importujemy moduł SCSS
+import classes from "./Tech.module.scss";
+
+// Lazy load the BallCanvas component
+const BallCanvas = lazy(() => import("./canvas/Ball"));
 
 const Tech = () => {
   return (
     <div className={classes.techContainer}>
       {technologies.map((technology) => (
         <div className={classes.techItem} key={technology.name}>
-          <BallCanvas icon={technology.icon} />
+          <Suspense fallback={<div>Loading Icon...</div>}>
+            <BallCanvas icon={technology.icon} />
+          </Suspense>
         </div>
       ))}
     </div>
