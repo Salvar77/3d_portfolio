@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import classes from "./Hero.module.scss";
 import { styles } from "../styles";
 import { ComputersCanvas } from "./canvas";
+import { isAndroid } from "react-device-detect"; // Importujemy isAndroid
 
 const Hero = () => {
   return (
@@ -22,8 +23,8 @@ const Hero = () => {
           </p>
         </div>
       </div>
-      <ComputersCanvas />
-
+      {!isAndroid && <ComputersCanvas />}{" "}
+      {/* Renderujemy tylko, jeśli nie Android */}
       <div className={classes.scrollContainer}>
         <a href="#about">
           <div className={classes.scrollLink}>
