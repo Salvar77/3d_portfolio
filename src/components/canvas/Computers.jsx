@@ -8,15 +8,15 @@ const Computers = ({ isMobile }) => {
   const computer = useGLTF("./desktop_pc/scene.gltf");
   return (
     <mesh>
-      <hemisphereLight intensity={1} groundColor="black" />
+      <hemisphereLight intensity={5} groundColor="black" />
       <pointLight intensity={1} />
       <spotLight
         position={[-20, 50, 10]}
         angle={0.12}
         penumbra={1}
         intensity={1}
-        castShadow={false}
-        // shadow-mapSize={1024}
+        castShadow
+        shadow-mapSize={1024}
       />
       <primitive
         object={computer.scene}
