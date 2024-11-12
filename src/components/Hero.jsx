@@ -20,8 +20,8 @@ const Hero = () => {
               Cześć, jestem <span style={{ color: "#915eff" }}>Łukasz</span>
             </h1>
             <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-              Tworzę wizualizację 3D, <br />
-              interfejsy użytkownika oraz aplikacje internetowe.
+              Tworzę nowoczesne strony, <br />
+              aplikacje internetowe i interfejsy użytkownika.
             </p>
           </div>
         </div>
@@ -59,8 +59,8 @@ const Hero = () => {
             Cześć, jestem <span style={{ color: "#915eff" }}>Łukasz</span>
           </h1>
           <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-            Tworzę wizualizację 3D, <br />
-            interfejsy użytkownika oraz aplikacje internetowe.
+            Tworzę nowoczesne strony, <br />
+            aplikacje internetowe i interfejsy użytkownika.
           </p>
         </div>
       </div>

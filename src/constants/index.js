@@ -35,6 +35,7 @@ import {
   eadmin,
   efront,
   universe,
+  gwat,
 } from "../assets";
 
 export const navLinks = [
@@ -153,6 +154,13 @@ const realizations = [
     image: fazar,
     modals: fazar2,
     link: "#",
+  },
+  {
+    title: "G-WAT",
+    icon: logo2,
+    description: "Pomiary elektryczne oraz serwis instalacji fotowoltaicznych",
+    image: gwat,
+    link: "https://www.g-wat.pl/",
   },
 ];
 

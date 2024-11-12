@@ -30,10 +30,11 @@ import meta from "./company/meta.png";
 import shopify from "./company/shopify.png";
 import starbucks from "./company/starbucks.png";
 import tesla from "./company/tesla.png";
-import kabe from "./company/hero2_640.jpg";
+import kabe from "./company/kabelogosearch.jpg";
 import seasun from "./company/seasun.jpg";
 import fazar from "./company/FazarSvg.webp";
 import fazar2 from "./company/vcardSvg.svg";
+import gwat from "./company/gallery57.jpg";
 
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
@@ -83,4 +84,5 @@ export {
   eadmin,
   efront,
   universe,
+  gwat,
 };
