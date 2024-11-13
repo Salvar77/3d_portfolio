@@ -2,8 +2,8 @@
 
 .contactBubble {
   position: fixed;
-  bottom: 2rem;
-  right: 2rem;
+  bottom: 1.5rem;
+  right: 1.5rem;
   padding: 0.9rem;
   background-color: rgba($blue, 0.9);
   color: white;
@@ -72,6 +72,8 @@
 
   @media (min-width: 992px) {
     padding: 1rem 1.5rem;
+    bottom: 2rem;
+    right: 2rem;
 
     .phoneIcon {
       font-size: 2.5rem;
