@@ -15,6 +15,7 @@ import BurgerMenu from "./components/Nav/BurgerMenu";
 import Logo from "./components/Nav/Logo";
 import Footer from "./components/Footer/Footer";
 import PrivacyPolicy from "./components/Legal/PrivacyPolicy";
+import ContactBubble from "./components/ContactBubble";
 
 const App = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -68,6 +69,7 @@ const App = () => {
         </Routes>
 
         <Footer />
+        <ContactBubble />
       </div>
     </BrowserRouter>
   );
