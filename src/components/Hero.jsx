@@ -55,7 +55,7 @@ const Hero = () => {
           <div className={classes.line} />
         </div>
         <div>
-          <h1 className={`${styles.heroHeadText} text-white`}>
+          <h1 className={`${styles.heroHeadText} text-white `}>
             Cześć, jestem <span style={{ color: "#915eff" }}>Łukasz</span>
           </h1>
           <p className={`${styles.heroSubText} mt-2 text-white-100`}>
@@ -64,7 +64,7 @@ const Hero = () => {
           </p>
         </div>
       </div>
-      <ComputersCanvas /> {/* Renderujemy tylko, jeśli nie Android */}
+      <ComputersCanvas />
       <div className={classes.scrollContainer}>
         <a href="#about">
           <div className={classes.scrollLink}>

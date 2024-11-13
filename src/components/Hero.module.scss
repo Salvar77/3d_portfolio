@@ -6,6 +6,12 @@
   height: 100vh;
   margin-left: auto;
   margin-right: auto;
+
+  @media screen and (max-width: 376px) {
+    h1 {
+      font-size: 1.8rem;
+    }
+  }
 }
 
 .heroContainer {
