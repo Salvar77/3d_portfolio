@@ -12,6 +12,10 @@
       font-size: 1.8rem;
     }
   }
+
+  .heroSubText {
+    padding: 0.5rem;
+  }
 }
 
 .heroContainer {
@@ -93,4 +97,20 @@
   border-radius: 50%;
   background-color: $secondary-color;
   margin-bottom: 4px;
+}
+
+@media screen and (min-width: 768px) {
+  .heroSection {
+    .heroSubText {
+      font-size: 1.6rem;
+    }
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .heroSection {
+    .heroSubText {
+      font-size: 1.8rem;
+    }
+  }
 }
