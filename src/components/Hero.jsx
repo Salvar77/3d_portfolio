@@ -58,7 +58,7 @@ const Hero = () => {
           <h1 className={`${styles.heroHeadText} text-white `}>
             Cześć, jestem <span style={{ color: "#915eff" }}>Łukasz</span>
           </h1>
-          <p className={`${classes.heroSubText} mt-2 text-white-100`}>
+          <p className={`${styles.heroSubText} mt-2 text-white-100`}>
             Tworzę nowoczesne strony, <br />
             aplikacje internetowe i interfejsy użytkownika.
           </p>
