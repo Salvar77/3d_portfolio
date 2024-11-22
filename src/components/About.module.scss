@@ -1,14 +1,6 @@
-@import "/styles/colors"; // Importuj plik ze zmiennymi kolorów
+@import "/styles/colors";
 
 .aboutContainer {
-  // .sectionSubText {
-  //   // Przenieś tutaj style, które były w `styles.sectionSubText` z TailwindCSS
-  // }
-
-  // .sectionHeadText {
-  //   // Przenieś tutaj style, które były w `styles.sectionHeadText` z TailwindCSS
-  // }
-
   .description {
     margin-top: 1rem;
     color: $secondary-color;
@@ -33,11 +25,7 @@
     .gradientBorder {
       padding: 1px;
       border-radius: 20px;
-      background: linear-gradient(
-        90.13deg,
-        #00cea8 1.9%,
-        #0077ff 97.5%
-      ); /* Zamieniony gradient na zielono-niebieski, bez różowych tonów */
+      background: linear-gradient(90.13deg, #00cea8 1.9%, #0077ff 97.5%);
       box-shadow: $card-shadow;
 
       .cardContent {

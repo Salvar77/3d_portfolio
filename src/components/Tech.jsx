@@ -3,10 +3,9 @@ import { BallCanvas } from "./canvas";
 import { SectionWrapper } from "../hoc";
 import { technologies } from "../constants";
 import classes from "./Tech.module.scss";
-import { isAndroid } from "react-device-detect"; // Importujemy isAndroid
+import { isAndroid } from "react-device-detect";
 
 const Tech = () => {
-  // Jeśli jest Android, zwróć null, by pominąć całą sekcję
   if (isAndroid) {
     return null;
   }

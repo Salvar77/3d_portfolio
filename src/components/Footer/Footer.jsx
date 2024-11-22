@@ -1,3 +1,4 @@
+import GoogleMaps from "../GoogleMaps";
 import classes from "./Footer.module.scss";
 
 const Footer = () => {
@@ -5,6 +6,7 @@ const Footer = () => {
 
   return (
     <footer className={classes.footer}>
+      <GoogleMaps />
       <div className={classes.footer__container}>
         <div className={classes.footer__text}>
           <p className={classes.footer__textInfo}>

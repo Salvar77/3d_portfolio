@@ -1,7 +1,6 @@
 import React from "react";
 import { Tilt } from "react-tilt";
 import { motion } from "framer-motion";
-
 import classes from "./About.module.scss";
 import { services } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";

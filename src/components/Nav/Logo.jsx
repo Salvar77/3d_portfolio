@@ -1,7 +1,7 @@
 import React from "react";
 import classes from "./Logo.module.scss";
 import { logo } from "../../assets";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Logo = ({ showLogo }) => {
   const navigate = useNavigate();

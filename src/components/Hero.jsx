@@ -3,10 +3,9 @@ import { motion } from "framer-motion";
 import classes from "./Hero.module.scss";
 import { styles } from "../styles";
 import { ComputersCanvas } from "./canvas";
-import { isAndroid } from "react-device-detect"; // Importujemy isAndroid
+import { isAndroid } from "react-device-detect";
 
 const Hero = () => {
-  // Jeśli jest Android, zwróć tylko elementy tekstowe, aby pominąć renderowanie ComputersCanvas
   if (isAndroid) {
     return (
       <section className={classes.heroSection}>
@@ -46,7 +45,6 @@ const Hero = () => {
     );
   }
 
-  // Jeśli nie jest Android, renderujemy pełną sekcję z ComputersCanvas
   return (
     <section className={classes.heroSection}>
       <div className={classes.heroContainer}>
