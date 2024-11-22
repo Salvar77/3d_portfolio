@@ -266,7 +266,7 @@ const projects = [
       },
     ],
     image: eadmin,
-    source_code_link: "https://github.com/Salvar77/elogistik-admin",
+    source_code_link: "https://github.com/Salvar77/Efinal/tree/main",
   },
   {
     name: "ecommerceFront",
@@ -287,7 +287,7 @@ const projects = [
       },
     ],
     image: efront,
-    source_code_link: "https://github.com/Salvar77/elogistik-front",
+    source_code_link: "https://github.com/Salvar77/Efinal/tree/master",
   },
   {
     name: "Universe Explorer",
