@@ -204,7 +204,7 @@
 }
 
 .section-sub-text {
-  color: var(--secondary-color); /* Dodaj odpowiedni kolor lub zmienną CSS */
+  color: var(--secondary-color);
   text-transform: uppercase;
   letter-spacing: 0.1em;
   font-size: 14px;
