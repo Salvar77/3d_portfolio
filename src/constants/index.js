@@ -138,7 +138,7 @@ const realizations = [
     description:
       "Usługi przyciemniania szyb samochodowych i regeneracji tapicerki skórzanej.",
     image: kabe,
-    link: "https://www.kabetintleather.pl/",
+    link: "https://www.kabetintleather.opole.pl/",
   },
   {
     title: "Sea & Sun Sarbinowo",
