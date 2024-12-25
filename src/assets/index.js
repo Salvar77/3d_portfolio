@@ -1,9 +1,9 @@
 import logo from "./logo3.svg";
 import logo2 from "./logo1.svg";
-import backend from "./backend.png";
-import creator from "./creator.png";
-import mobile from "./mobile.png";
-import web from "./web.png";
+import backend from "./backend.webp";
+import creator from "./creator.webp";
+import mobile from "./mobile.webp";
+import web from "./web.webp";
 import github from "./github.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
@@ -30,18 +30,18 @@ import meta from "./company/meta.png";
 import shopify from "./company/shopify.png";
 import starbucks from "./company/starbucks.png";
 import tesla from "./company/tesla.png";
-import kabe from "./company/kabelogosearch.jpg";
-import seasun from "./company/seasun.jpg";
+import kabe from "./company/kabelogosearch.webp";
+import seasun from "./company/seasun.webp";
 import fazar from "./company/FazarSvg.webp";
 import fazar2 from "./company/vcardSvg.svg";
-import gwat from "./company/gallery57.jpg";
+import gwat from "./company/gallery57.webp";
 
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
-import eadmin from "./image1.png";
-import efront from "./efinal1.png";
-import universe from "./universe.jpg";
+import eadmin from "./image1.webp";
+import efront from "./efinal1.webp";
+import universe from "./universe.webp";
 
 export {
   logo,

@@ -21,6 +21,14 @@
   display: block;
 }
 
+.bg-hero-pattern {
+  position: absolute;
+  background-image: url("/src/assets/herobg.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 .black-gradient {
   background: #000000; /* fallback for old browsers */
   background: -webkit-linear-gradient(

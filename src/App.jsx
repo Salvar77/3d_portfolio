@@ -41,7 +41,7 @@ const App = () => {
   return (
     <BrowserRouter>
       <div className="relative z-0 bg-primary">
-        <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
+        <div className="bg-hero-pattern h-screen w-full ">
           <Logo showLogo={showLogo} />
           <Nav isOpen={isOpen} toggleNav={toggleNav} />
           <BurgerMenu isOpen={isOpen} handleOpen={toggleNav} />

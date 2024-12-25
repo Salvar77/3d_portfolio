@@ -11,6 +11,7 @@ const GoogleMaps = () => {
         allowFullScreen=""
         loading="lazy"
         referrerPolicy="no-referrer-when-downgrade"
+        title="Mapa lokalizacji firmy Search IT"
       ></iframe>
     </div>
   );

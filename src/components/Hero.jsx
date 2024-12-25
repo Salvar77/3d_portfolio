@@ -25,7 +25,7 @@ const Hero = () => {
           </div>
         </div>
         <div className={classes.scrollContainer}>
-          <a href="#about">
+          <a href="#about" aria-label="Przejdź do sekcji 'O mnie'">
             <div className={classes.scrollLink}>
               <motion.div
                 animate={{
@@ -64,7 +64,7 @@ const Hero = () => {
       </div>
       <ComputersCanvas />
       <div className={classes.scrollContainer}>
-        <a href="#about">
+        <a href="#about" aria-label="Przejdź do sekcji 'O mnie'">
           <div className={classes.scrollLink}>
             <motion.div
               animate={{
