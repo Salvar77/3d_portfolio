@@ -39,6 +39,8 @@ const ExperienceCard = ({ realization, openModal }) => (
         className={classes.realizations__img}
         src={realization.image}
         alt={`Zdjęcie ${realization.title}`}
+        width={400}
+        height={225}
       />
       {realization.title === "Fazar" ? (
         <button
