@@ -16,7 +16,7 @@ const Hero = () => {
           </div>
           <div>
             <h1 className={`${styles.heroHeadText} text-white`}>
-              Witaj, jestem <span style={{ color: "#915eff" }}>Łukasz</span>
+              Witam, jestem <span style={{ color: "#915eff" }}>Łukasz</span>
             </h1>
             <p className={`${styles.heroSubText} mt-2 text-white-100`}>
               Tworzę nowoczesne strony, <br />
@@ -54,7 +54,7 @@ const Hero = () => {
         </div>
         <div>
           <h1 className={`${styles.heroHeadText} text-white `}>
-            Witaj, jestem <span style={{ color: "#915eff" }}>Łukasz</span>
+            Witam, jestem <span style={{ color: "#915eff" }}>Łukasz</span>
           </h1>
           <p className={`${styles.heroSubText} mt-2 text-white-100`}>
             Tworzę nowoczesne strony, <br />
