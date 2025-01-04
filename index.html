@@ -10,9 +10,12 @@
           j = d.createElement(s),
           dl = l != "dataLayer" ? "&l=" + l : "";
         j.async = true;
-        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        j.src =
+          "https://www.googletagmanager.com/gtm.js?id=" +
+          import.meta.env.VITE_GTM_ID +
+          dl;
         f.parentNode.insertBefore(j, f);
-      })(window, document, "script", "dataLayer", "GTM-WMHBTWVL");
+      })(window, document, "script", "dataLayer", import.meta.env.VITE_GTM_ID);
     </script>
     <!-- End Google Tag Manager -->
     <meta charset="UTF-8" />
@@ -28,7 +31,7 @@
     <!-- Google Tag Manager (noscript) -->
     <noscript
       ><iframe
-        src="https://www.googletagmanager.com/ns.html?id=GTM-WMHBTWVL"
+        src="https://www.googletagmanager.com/ns.html?id=VITE_GTM_ID"
         height="0"
         width="0"
         style="display: none; visibility: hidden"
