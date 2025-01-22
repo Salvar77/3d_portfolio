@@ -6,6 +6,21 @@ import { ComputersCanvas } from "./canvas";
 import { isAndroid } from "react-device-detect";
 
 const Hero = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <section className={classes.heroSection}>
       <div className={classes.heroContainer}>
@@ -15,7 +30,8 @@ const Hero = () => {
         </div>
         <div>
           <h1 className={`${styles.heroHeadText} text-white`}>
-            Witam, jestem <span style={{ color: "#915eff" }}>Łukasz</span>
+            Witam, jestem {isMobile ? <br /> : null}
+            <span style={{ color: "#915eff" }}>Łukasz</span>
           </h1>
           <p className={`${styles.heroSubText} mt-2 text-white-100`}>
             Tworzę nowoczesne strony, <br />

@@ -75,6 +75,11 @@
   transition-timing-function: ease;
 }
 
+.hamburgerInner::before {
+  right: 0;
+  width: 70%;
+}
+
 .hamburgerInner::before,
 .hamburgerInner::after {
   content: "";
@@ -91,10 +96,12 @@
 
 .hamburger__arrow.isActive .hamburgerInner::before {
   transform: translate3d(-8px, 0, 0) rotate(-45deg) scale(0.7, 1);
+  width: 100%;
 }
 
 .hamburger__arrow.isActive .hamburgerInner::after {
   transform: translate3d(-8px, 0, 0) rotate(45deg) scale(0.7, 1);
+  width: 100%;
 }
 
 .spin {
