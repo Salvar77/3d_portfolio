@@ -299,7 +299,7 @@ const projects = [
     source_code_link: "https://github.com/Salvar77/Efinal/tree/master",
   },
   {
-    name: "Universe Explorer",
+    name: "UniverseExplorer",
     description:
       "Strona internetowa stworzona przy użyciu HTML, SCSS oraz JavaScript, będąca moim pierwszym projektem. Projekt ten to klasyczna, statyczna witryna, która pozwala na podstawową interakcję użytkownika i prezentację treści. Dzięki zastosowaniu SCSS udało się uzyskać lepszą organizację stylów, a JavaScript dodaje podstawową funkcjonalność, co sprawia, że strona jest dynamiczna i bardziej interaktywna.",
     tags: [
@@ -320,7 +320,7 @@ const projects = [
     source_code_link: "https://github.com/Salvar77/Universe",
   },
   {
-    name: "ecommerceCustomCase",
+    name: "ecommercePhoneCase",
     description:
       "Strona e-commerce wykorzystująca Next.js 14, Tailwind, React oraz TypeScript umożliwiająca użytkownikom wgrywanie własnych zdjęć i zamawianie spersonalizowanych etui na telefon. Zaawansowane funkcje, takie jak podgląd finalnego projektu czy bezpieczna obsługa płatności online, zapewniają płynne i intuicyjne doświadczenie zakupowe. Zastosowanie nowoczesnych technologii gwarantuje szybką i bezproblemową obsługę wielu produktów oraz łatwe skalowanie witryny.",
     tags: [

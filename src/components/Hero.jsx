@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import classes from "./Hero.module.scss";
 import { styles } from "../styles";
+import { ComputersCanvas } from "./canvas";
+import { isAndroid } from "react-device-detect";
 
 const Hero = () => {
   return (
@@ -21,9 +23,8 @@ const Hero = () => {
           </p>
         </div>
       </div>
-
       <div className={classes.imageContainer}>
-        <img src="/logo3.svg" alt="Logo firmy" className={classes.heroImage} />
+        <img src="/logo3.svg" alt="Twoja firma" className={classes.image} />
       </div>
       <div className={classes.scrollContainer}>
         <a href="#about" aria-label="Przejdź do sekcji 'O mnie'">
