@@ -276,6 +276,7 @@ const projects = [
     ],
     image: eadmin,
     source_code_link: "https://github.com/Salvar77/Efinal/tree/main",
+    vercel_link: "https://efinal-admin.vercel.app/",
   },
   {
     name: "ecommerceFront",
@@ -297,6 +298,7 @@ const projects = [
     ],
     image: efront,
     source_code_link: "https://github.com/Salvar77/Efinal/tree/master",
+    vercel_link: "https://efinal-front-teal.vercel.app/",
   },
   {
     name: "UniverseExplorer",
@@ -318,6 +320,7 @@ const projects = [
     ],
     image: universe,
     source_code_link: "https://github.com/Salvar77/Universe",
+    vercel_link: "https://universe-alpha.vercel.app/",
   },
   {
     name: "ecommercePhoneCase",
@@ -339,6 +342,7 @@ const projects = [
     ],
     image: cobra,
     source_code_link: "https://github.com/Salvar77/casecobra-dev",
+    vercel_link: "https://casecobra-dev-lovat.vercel.app/",
   },
 ];
 

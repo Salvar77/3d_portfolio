@@ -3,6 +3,7 @@ import { Tilt } from "react-tilt";
 import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { github } from "../assets";
+import { vercel } from "../assets";
 import { SectionWrapper } from "../hoc";
 import { projects } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
@@ -17,6 +18,7 @@ const ProjectCard = ({
   tags,
   image,
   source_code_link,
+  vercel_link,
 }) => {
   return (
     <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
@@ -37,6 +39,12 @@ const ProjectCard = ({
           />
 
           <div className={classes.cardImageHover}>
+            <div
+              onClick={() => window.open(vercel_link, "_blank")}
+              className={classes.vercelIconContainer}
+            >
+              <img src={vercel} alt="vercel" className={classes.vercelIcon} />
+            </div>
             <div
               onClick={() => window.open(source_code_link, "_blank")}
               className={classes.githubIconContainer}

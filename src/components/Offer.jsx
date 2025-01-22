@@ -39,15 +39,15 @@ const Offer = () => {
         <h2>Dlaczego Warto Mnie Wybrać</h2>
         <ul>
           <li>
-            Zaangażowanie i ciągłe doskonalenie: stale rozwijam swoje
-            umiejętności, pracując nad różnorodnymi projektami.
+            <strong>Zaangażowanie i ciągłe doskonalenie:</strong> stale rozwijam
+            swoje umiejętności, pracując nad różnorodnymi projektami.
           </li>
           <li>
-            Skupienie na użytkowniku: projektuję strony z myślą o łatwości
-            obsługi i przyjemności z korzystania.
+            <strong>Skupienie na użytkowniku:</strong> projektuję strony z myślą
+            o łatwości obsługi i przyjemności z korzystania.
           </li>
           <li>
-            Nowoczesne technologie: używam aktualnych narzędzi
+            <strong>Nowoczesne technologie:</strong> używam aktualnych narzędzi
             programistycznych.
           </li>
         </ul>
