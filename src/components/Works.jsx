@@ -27,7 +27,12 @@ const ProjectCard = ({
         className={classes.projectCard}
       >
         <div className={classes.projectImageContainer}>
-          <img src={image} alt={name} className={classes.projectImage} />
+          <img
+            src={image}
+            alt={name}
+            className={classes.projectImage}
+            loading="lazy"
+          />
 
           <div className={classes.cardImageHover}>
             <div
