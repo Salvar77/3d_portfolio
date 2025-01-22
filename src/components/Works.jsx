@@ -8,6 +8,8 @@ import { projects } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
 import classes from "./Works.module.scss";
 
+const isIPhone = /iPhone|iPad|iPod/i.test(navigator.userAgent);
+
 const ProjectCard = ({
   index,
   name,
@@ -62,6 +64,7 @@ const ProjectCard = ({
 };
 
 const Works = () => {
+  const visibleProjects = isIPhone ? projects.slice(0, 3) : projects;
   return (
     <>
       <motion.div id="projects" variants={textVariant()}>
@@ -85,7 +88,7 @@ const Works = () => {
         </div>
 
         <div className={classes.projectsContainer}>
-          {projects.map((project, index) => (
+          {visibleProjects.map((project, index) => (
             <ProjectCard key={`project-${index}`} index={index} {...project} />
           ))}
         </div>
