@@ -18,40 +18,31 @@ const ProjectCard = ({
 }) => {
   return (
     <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
-      <Tilt
-        options={{
-          max: 45,
-          scale: 1,
-          speed: 450,
-        }}
-        className={classes.projectCard}
-      >
-        <div className={classes.projectImageContainer}>
-          <img src={image} alt={name} className={classes.projectImage} />
+      <div className={classes.projectImageContainer}>
+        <img src={image} alt={name} className={classes.projectImage} />
 
-          <div className={classes.cardImageHover}>
-            <div
-              onClick={() => window.open(source_code_link, "_blank")}
-              className={classes.githubIconContainer}
-            >
-              <img src={github} alt="github" className={classes.githubIcon} />
-            </div>
+        <div className={classes.cardImageHover}>
+          <div
+            onClick={() => window.open(source_code_link, "_blank")}
+            className={classes.githubIconContainer}
+          >
+            <img src={github} alt="github" className={classes.githubIcon} />
           </div>
         </div>
+      </div>
 
-        <div className={classes.projectInfo}>
-          <h3 className={classes.projectTitle}>{name}</h3>
-          <p className={classes.projectDescription}>{description}</p>
-        </div>
+      <div className={classes.projectInfo}>
+        <h3 className={classes.projectTitle}>{name}</h3>
+        <p className={classes.projectDescription}>{description}</p>
+      </div>
 
-        <div className={classes.projectTags}>
-          {tags.map((tag) => (
-            <p key={tag.name} className={`${classes.projectTag} ${tag.color}`}>
-              #{tag.name}
-            </p>
-          ))}
-        </div>
-      </Tilt>
+      <div className={classes.projectTags}>
+        {tags.map((tag) => (
+          <p key={tag.name} className={`${classes.projectTag} ${tag.color}`}>
+            #{tag.name}
+          </p>
+        ))}
+      </div>
     </motion.div>
   );
 };
