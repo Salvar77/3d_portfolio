@@ -35,6 +35,7 @@ import seasun from "./company/seasun.webp";
 import fazar from "./company/FazarSvg.webp";
 import fazar2 from "./company/vcardSvg.svg";
 import gwat from "./company/gallery57.webp";
+import cobra from "./company/caseCobra.png";
 
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
@@ -85,4 +86,5 @@ export {
   efront,
   universe,
   gwat,
+  cobra,
 };

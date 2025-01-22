@@ -36,6 +36,7 @@ import {
   efront,
   universe,
   gwat,
+  cobra,
 } from "../assets";
 
 export const navLinks = [
@@ -50,6 +51,10 @@ export const navLinks = [
   {
     id: "projects",
     title: "Projekty",
+  },
+  {
+    id: "oferta",
+    title: "Oferta",
   },
   {
     id: "contact",
@@ -88,6 +93,10 @@ const technologies = [
   {
     name: "JavaScript",
     icon: javascript,
+  },
+  {
+    name: "TypeScript",
+    icon: typescript,
   },
   {
     name: "Stripe",
@@ -309,6 +318,27 @@ const projects = [
     ],
     image: universe,
     source_code_link: "https://github.com/Salvar77/Universe",
+  },
+  {
+    name: "ecommerceCustomCase",
+    description:
+      "Strona e-commerce wykorzystująca Next.js 14, Tailwind, React oraz TypeScript umożliwiająca użytkownikom wgrywanie własnych zdjęć i zamawianie spersonalizowanych etui na telefon. Zaawansowane funkcje, takie jak podgląd finalnego projektu czy bezpieczna obsługa płatności online, zapewniają płynne i intuicyjne doświadczenie zakupowe. Zastosowanie nowoczesnych technologii gwarantuje szybką i bezproblemową obsługę wielu produktów oraz łatwe skalowanie witryny.",
+    tags: [
+      {
+        name: "nextjs",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "typescript",
+        color: "green-text-gradient",
+      },
+      {
+        name: "tailwind",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: cobra,
+    source_code_link: "https://github.com/Salvar77/casecobra-dev",
   },
 ];
 

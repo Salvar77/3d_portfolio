@@ -1,22 +1,37 @@
 @import "../../../styles/colors";
 
 .footer {
-  background-color: $primary-color;
-
   &__text {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
+    text-align: center;
     padding-top: 1rem;
+    margin: 0.8rem;
 
     &Info {
       margin-bottom: 1rem;
+      color: $white-100;
+    }
+
+    p {
+      color: $secondary-color;
+      margin: 0.5rem 0;
+
+      a {
+        color: $blue;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
     }
   }
 
   &__icons {
     display: flex;
-    flex-direction: row;
     justify-content: center;
     padding: 1rem;
     list-style: none;
@@ -27,10 +42,26 @@
       a {
         color: $dark-smooth;
         text-decoration: none;
+
         &:hover {
           color: $gold-main;
         }
+
+        i {
+          font-size: 1.5rem;
+        }
       }
+    }
+  }
+
+  &__bottom {
+    text-align: center;
+    padding: 1rem 0;
+    color: $secondary-color;
+
+    &Info {
+      margin: 0;
+      font-size: 0.9rem;
     }
   }
 }

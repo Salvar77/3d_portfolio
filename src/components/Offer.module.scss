@@ -1,0 +1,75 @@
+@import "../../styles/colors";
+
+.offerContainer {
+  padding: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.about,
+.missionVision,
+.technologies,
+.timeline,
+.portfolio,
+.support,
+.pricing,
+.whyMe {
+  margin-bottom: 2rem;
+
+  h1,
+  h2 {
+    font-size: 1.8rem;
+    color: $white-100;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: $secondary-color;
+  }
+
+  ul {
+    list-style: disc;
+    padding-left: 1.5rem;
+
+    li {
+      margin: 0.5rem 0;
+      color: $secondary-color;
+    }
+  }
+
+  a {
+    color: $violet-1;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.contact {
+  margin-top: 2rem;
+
+  h2 {
+    font-size: 1.8rem;
+    color: $gold-main;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: $white-100;
+
+    a {
+      color: $gold-main;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

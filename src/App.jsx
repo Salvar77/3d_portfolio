@@ -16,6 +16,7 @@ import Logo from "./components/Nav/Logo";
 import Footer from "./components/Footer/Footer";
 import PrivacyPolicy from "./components/Legal/PrivacyPolicy";
 import ContactBubble from "./components/ContactBubble";
+import Offer from "./components/Offer";
 
 const App = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -57,6 +58,7 @@ const App = () => {
                 <Experience />
                 <Tech />
                 <Works />
+                <Offer />
 
                 <div className="relative z-0">
                   <Contact />
