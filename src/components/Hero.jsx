@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import classes from "./Hero.module.scss";
 import { styles } from "../styles";
@@ -6,6 +6,21 @@ import { ComputersCanvas } from "./canvas";
 import { isAndroid } from "react-device-detect";
 
 const Hero = () => {
+  const [isDesktop, setIsDesktop] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsDesktop(window.innerWidth > 992);
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   if (isAndroid) {
     return (
       <section className={classes.heroSection}>
@@ -53,7 +68,7 @@ const Hero = () => {
           <div className={classes.line} />
         </div>
         <div>
-          <h1 className={`${styles.heroHeadText} text-white `}>
+          <h1 className={`${styles.heroHeadText} text-white`}>
             Witam, jestem <span style={{ color: "#915eff" }}>Łukasz</span>
           </h1>
           <p className={`${styles.heroSubText} mt-2 text-white-100`}>
@@ -62,7 +77,13 @@ const Hero = () => {
           </p>
         </div>
       </div>
-      <ComputersCanvas />
+      {isDesktop ? (
+        <div className={classes.imageContainer}>
+          <img src="/logo3.svg" alt="Twoja firma" className={classes.image} />
+        </div>
+      ) : (
+        <ComputersCanvas />
+      )}
       <div className={classes.scrollContainer}>
         <a href="#about" aria-label="Przejdź do sekcji 'O mnie'">
           <div className={classes.scrollLink}>
