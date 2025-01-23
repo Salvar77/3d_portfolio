@@ -17,6 +17,7 @@ import Footer from "./components/Footer/Footer";
 import PrivacyPolicy from "./components/Legal/PrivacyPolicy";
 import ContactBubble from "./components/ContactBubble";
 import Offer from "./components/Offer";
+import SEO from "./components/SEO";
 
 const App = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -41,6 +42,12 @@ const App = () => {
 
   return (
     <BrowserRouter>
+      <SEO
+        title="Search IT | Strony i Sklepy Internetowe"
+        description="Nowoczesne strony internetowe i sklepy e-commerce zaprojektowane i stworzone w React i Next.js. Szybkie, responsywne i zoptymalizowane pod SEO."
+        image="https://searchit.pl/logofav4.webp"
+        url="https://searchit.pl"
+      />
       <div className="relative z-0 bg-primary">
         <div className="bg-hero-pattern h-screen w-full ">
           <Logo showLogo={showLogo} />
