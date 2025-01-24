@@ -8,18 +8,7 @@ const SEO = () => (
       content="Nowoczesne strony internetowe i sklepy e-commerce zaprojektowane i stworzone w React i Next.js. Szybkie, responsywne i zoptymalizowane pod SEO."
     />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta
-      property="og:title"
-      content="Search IT | Strony i Sklepy Internetowe"
-    />
-    <meta
-      property="og:description"
-      content="Nowoczesne strony internetowe i sklepy e-commerce zaprojektowane i stworzone w React i Next.js. Szybkie, responsywne i zoptymalizowane pod SEO."
-    />
-    <meta property="og:url" content="https://www.searchit.pl" />
-    <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="Search IT" />
-    <meta property="og:locale" content="pl_PL" />
+
     <link rel="canonical" href="https://www.searchit.pl" />
     <script
       type="application/ld+json"
