@@ -45,8 +45,8 @@ const App = () => {
       <SEO
         title="Search IT | Strony i Sklepy Internetowe"
         description="Nowoczesne strony internetowe i sklepy e-commerce zaprojektowane i stworzone w React i Next.js. Szybkie, responsywne i zoptymalizowane pod SEO."
-        image="https://searchit.pl/logofav4.webp"
-        url="https://searchit.pl"
+        image="https://www.searchit.pl/logofav4.webp"
+        url="https://www.searchit.pl"
       />
       <div className="relative z-0 bg-primary">
         <div className="bg-hero-pattern h-screen w-full ">

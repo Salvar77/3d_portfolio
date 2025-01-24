@@ -16,23 +16,23 @@ const SEO = () => (
       property="og:description"
       content="Nowoczesne strony internetowe i sklepy e-commerce zaprojektowane i stworzone w React i Next.js. Szybkie, responsywne i zoptymalizowane pod SEO."
     />
-    <meta property="og:image" content="https://searchit.pl/logofav4.webp" />
-    <meta property="og:url" content="https://searchit.pl" />
+    <meta property="og:image" content="https://www.searchit.pl/logofav4.webp" />
+    <meta property="og:url" content="https://www.searchit.pl" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Search IT" />
     <meta property="og:locale" content="pl_PL" />
-    <link rel="canonical" href="https://searchit.pl" />
+    <link rel="canonical" href="https://www.searchit.pl" />
     <script
       type="application/ld+json"
       dangerouslySetInnerHTML={{
         __html: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "LocalBusiness",
-          url: "https://searchit.pl",
+          url: "https://www.searchit.pl",
           name: "Search IT",
           description:
             "Projektuję i tworzę funkcjonalne, responsywne strony WWW i aplikacje zoptymalizowane pod kątem SEO. Oferuję kompleksowe rozwiązania i wsparcie techniczne.",
-          logo: "https://searchit.pl/logofav4.webp",
+          logo: "https://www.searchit.pl/logofav4.webp",
           telephone: "+48-123-456-789",
           contactPoint: {
             "@type": "ContactPoint",
