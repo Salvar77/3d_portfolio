@@ -16,7 +16,6 @@ const SEO = () => (
       property="og:description"
       content="Nowoczesne strony internetowe i sklepy e-commerce zaprojektowane i stworzone w React i Next.js. Szybkie, responsywne i zoptymalizowane pod SEO."
     />
-    <meta property="og:image" content="https://www.searchit.pl/logofav4.webp" />
     <meta property="og:url" content="https://www.searchit.pl" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Search IT" />
