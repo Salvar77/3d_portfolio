@@ -346,7 +346,7 @@ const projects = [
     vercel_link: "https://casecobra-dev-lovat.vercel.app/",
   },
   {
-    name: "LibraryMaster",
+    name: "ecommerceBookWise",
     description:
       "Platforma do zarządzania biblioteką uniwersytecką, stworzona w oparciu o Next.js, React i TypeScript. Umożliwia przeglądanie, wypożyczanie oraz rezerwowanie książek. Integracja z Neon, ImageKit i Upstash zapewnia szybkie operacje na danych, obsługę multimediów i cache'owanie. Projekt jest częścią większego systemu bibliotecznego, który w przyszłości zostanie rozszerzony o znacznie bardziej rozbudowany panel administracyjny, umożliwiający kompleksowe zarządzanie użytkownikami czy analizę statystyk",
     tags: [

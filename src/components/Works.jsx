@@ -10,6 +10,7 @@ import { fadeIn, textVariant } from "../utils/motion";
 import classes from "./Works.module.scss";
 
 const isIPhone = /iPhone|iPad|iPod/i.test(navigator.userAgent);
+const isAndroid = /Android/i.test(navigator.userAgent);
 
 const ProjectCard = ({
   index,
@@ -72,7 +73,12 @@ const ProjectCard = ({
 };
 
 const Works = () => {
-  const visibleProjects = isIPhone ? projects.slice(0, 3) : projects;
+  const visibleProjects = isIPhone
+    ? projects.slice(0, 3)
+    : isAndroid
+    ? projects.slice(0, 4)
+    : projects;
+
   return (
     <>
       <motion.div id="projects" variants={textVariant()}>
