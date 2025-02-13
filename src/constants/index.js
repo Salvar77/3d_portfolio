@@ -37,6 +37,7 @@ import {
   universe,
   gwat,
   cobra,
+  library,
 } from "../assets";
 
 export const navLinks = [
@@ -343,6 +344,32 @@ const projects = [
     image: cobra,
     source_code_link: "https://github.com/Salvar77/casecobra-dev",
     vercel_link: "https://casecobra-dev-lovat.vercel.app/",
+  },
+  {
+    name: "LibraryMaster",
+    description:
+      "Platforma do zarządzania biblioteką uniwersytecką, stworzona w oparciu o Next.js, React i TypeScript. Umożliwia przeglądanie, wypożyczanie oraz rezerwowanie książek. Integracja z Neon, ImageKit i Upstash zapewnia szybkie operacje na danych, obsługę multimediów i cache'owanie. Projekt jest częścią większego systemu bibliotecznego, który w przyszłości zostanie rozszerzony o znacznie bardziej rozbudowany panel administracyjny, umożliwiający kompleksowe zarządzanie użytkownikami czy analizę statystyk",
+    tags: [
+      {
+        name: "typescript",
+        color: "green-text-gradient",
+      },
+      {
+        name: "tailwind",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "postgresql",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "redis",
+        color: "green-text-gradient",
+      },
+    ],
+    image: library,
+    source_code_link: "https://github.com/Salvar77/university-library-project",
+    vercel_link: "https://university-library-project-5f7l.vercel.app/",
   },
 ];
 

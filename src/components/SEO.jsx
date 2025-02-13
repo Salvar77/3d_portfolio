@@ -2,13 +2,7 @@ import { Helmet } from "react-helmet-async";
 
 const SEO = () => (
   <Helmet>
-    <title>Search IT | Strony i Sklepy Internetowe</title>
-    <meta
-      name="description"
-      content="Nowoczesne strony internetowe i sklepy e-commerce zaprojektowane i stworzone w React i Next.js. Szybkie, responsywne i zoptymalizowane pod SEO."
-    />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-
     <link rel="canonical" href="https://www.searchit.pl" />
     <script
       type="application/ld+json"
@@ -19,7 +13,7 @@ const SEO = () => (
           url: "https://www.searchit.pl",
           name: "Search IT",
           description:
-            "Projektuję i tworzę funkcjonalne, responsywne strony WWW i aplikacje zoptymalizowane pod kątem SEO. Oferuję kompleksowe rozwiązania i wsparcie techniczne.",
+            "Nowoczesne strony internetowe i sklepy e-commerce zaprojektowane i stworzone w React i Next.js w Opolu. Szybkie, responsywne i zoptymalizowane pod SEO.",
           logo: "https://www.searchit.pl/logofav4.webp",
           telephone: "+48-123-456-789",
           contactPoint: {
@@ -54,21 +48,21 @@ const SEO = () => (
               "@type": "Offer",
               itemOffered: {
                 "@type": "Service",
-                name: "Projektowanie i tworzenie stron WWW",
+                name: "Projektowanie i tworzenie stron WWW w Opolu",
               },
             },
             {
               "@type": "Offer",
               itemOffered: {
                 "@type": "Service",
-                name: "Tworzenie sklepów internetowych",
+                name: "Tworzenie sklepów internetowych w Opolu",
               },
             },
             {
               "@type": "Offer",
               itemOffered: {
                 "@type": "Service",
-                name: "Optymalizacja SEO",
+                name: "Optymalizacja SEO w Opolu",
               },
             },
           ],

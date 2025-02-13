@@ -42,9 +42,9 @@ const About = () => {
       >
         Nazywam się Łukasz i jestem Full-Stack Developerem. Reprezentuję firmę
         Search IT, która specjalizuje się w projektowaniu funkcjonalnych,
-        responsywnych stron WWW oraz sklepów internetowych. Dbam o to, by
-        tworzone projekty były zoptymalizowane pod kątem SEO, co pomaga Twojej
-        firmie zyskać widoczność w wyszukiwarkach.
+        responsywnych stron WWW oraz sklepów internetowych w Opolu. Dbam o to,
+        by tworzone projekty były zoptymalizowane pod kątem SEO, co pomaga
+        Twojej firmie zyskać widoczność w wyszukiwarkach.
       </motion.p>
 
       <div className={classes.serviceContainer}>

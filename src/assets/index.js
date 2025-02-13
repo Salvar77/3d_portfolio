@@ -37,6 +37,7 @@ import fazar from "./company/FazarSvg.webp";
 import fazar2 from "./company/vcardSvg.svg";
 import gwat from "./company/gallery57.webp";
 import cobra from "./company/caseCobra.webp";
+import library from "./company/library.webp";
 
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
@@ -88,5 +89,6 @@ export {
   universe,
   gwat,
   cobra,
+  library,
   vercel,
 };
