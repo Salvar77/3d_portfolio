@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import {
   About,
   Contact,
@@ -19,37 +19,28 @@ import ContactBubble from "./components/ContactBubble";
 import Offer from "./components/Offer";
 import SEO from "./components/SEO";
 
-const App = () => {
+function Layout() {
   const [isOpen, setIsOpen] = useState(false);
-
-  const toggleNav = () => {
-    setIsOpen(!isOpen);
-  };
+  const toggleNav = () => setIsOpen(!isOpen);
 
   const [showLogo, setShowLogo] = useState(true);
-
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollPos = document.documentElement.scrollTop;
       const windowWidth = window.innerWidth;
-
       setShowLogo(!(windowWidth < 992 && currentScrollPos > 200));
     };
-
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  });
+  }, []);
+
+  const location = useLocation();
+  const isHomePage = location.pathname === "/";
 
   return (
-    <BrowserRouter>
-      <SEO
-        title="Search IT | Strony i Sklepy Internetowe"
-        description="Nowoczesne strony internetowe i sklepy e-commerce zaprojektowane i stworzone w React i Next.js. Szybkie, responsywne i zoptymalizowane pod SEO."
-        image="https://www.searchit.pl/logofav5.webp"
-        url="https://www.searchit.pl"
-      />
+    <div>
       <div className="relative z-0 bg-primary">
-        <div className="bg-hero-pattern h-screen w-full ">
+        <div className={isHomePage ? "bg-hero-pattern h-screen w-full" : ""}>
           <Logo showLogo={showLogo} />
           <Nav isOpen={isOpen} toggleNav={toggleNav} />
           <BurgerMenu isOpen={isOpen} handleOpen={toggleNav} />
@@ -66,7 +57,6 @@ const App = () => {
                 <Tech />
                 <Works />
                 <Offer />
-
                 <div className="relative z-0">
                   <Contact />
                   <StarsCanvas />
@@ -80,8 +70,20 @@ const App = () => {
         <Footer />
         <ContactBubble />
       </div>
+    </div>
+  );
+}
+
+export default function App() {
+  return (
+    <BrowserRouter>
+      <SEO
+        title="Search IT | Strony i Sklepy Internetowe"
+        description="Nowoczesne strony internetowe i sklepy e-commerce..."
+        image="https://www.searchit.pl/logofav5.webp"
+        url="https://www.searchit.pl"
+      />
+      <Layout />
     </BrowserRouter>
   );
-};
-
-export default App;
+}

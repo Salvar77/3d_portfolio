@@ -129,7 +129,7 @@ const Contact = () => {
                 przysługuje mi prawo dostępu do swoich danych, możliwości ich
                 poprawiania, żądania zaprzestania ich przetwarzania.
                 Administratorem danych osobowych jest Łukasz Kuś Search IT, ul.
-                Wojska Polskiego 1-3/40, 46-862 Opole.
+                Wojska Polskiego 1/40, 46-862 Opole.
               </label>
             </div>
             <button type="submit" className={classes.button}>
@@ -165,7 +165,11 @@ const Contact = () => {
       </div>
       <p className={classes.policy}>
         Więcej informacji na temat przetwarzania danych osobowych znajdziesz w
-        <Link to="/Legal" className={classes.policy__link}>
+        <Link
+          to="/Legal"
+          className={classes.policy__link}
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+        >
           <span>Polityce Prywatności</span>
         </Link>
       </p>

@@ -40,12 +40,14 @@ const ProjectCard = ({
           />
 
           <div className={classes.cardImageHover}>
-            <div
-              onClick={() => window.open(vercel_link, "_blank")}
-              className={classes.vercelIconContainer}
-            >
-              <img src={vercel} alt="vercel" className={classes.vercelIcon} />
-            </div>
+            {vercel_link && (
+              <div
+                onClick={() => window.open(vercel_link, "_blank")}
+                className={classes.vercelIconContainer}
+              >
+                <img src={vercel} alt="vercel" className={classes.vercelIcon} />
+              </div>
+            )}
             <div
               onClick={() => window.open(source_code_link, "_blank")}
               className={classes.githubIconContainer}

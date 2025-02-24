@@ -38,6 +38,7 @@ import {
   gwat,
   cobra,
   library,
+  estate,
 } from "../assets";
 
 export const navLinks = [
@@ -370,6 +371,31 @@ const projects = [
     image: library,
     source_code_link: "https://github.com/Salvar77/university-library-project",
     vercel_link: "https://university-library-project-5f7l.vercel.app/",
+  },
+  {
+    name: "NativeRealty",
+    description:
+      "Mobilna aplikacja do zarządzania nieruchomościami, stworzona przy użyciu React Native i Expo. Umożliwia przeglądanie ofert, wyszukiwanie szczegółowych informacji oraz bezpośredni kontakt z agentami. Intuicyjny interfejs i responsywny design gwarantują wygodne przeglądanie ofert zarówno na smartfonach, jak i tabletach. Integracja z systemami geolokalizacji i map umożliwia precyzyjne wyszukiwanie nieruchomości w wybranej okolicy. Projekt został zoptymalizowany pod kątem wydajności i płynnej nawigacji.",
+    tags: [
+      {
+        name: "reactnative",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "expo",
+        color: "green-text-gradient",
+      },
+      {
+        name: "mobile",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "typescript",
+        color: "blue-text-gradient",
+      },
+    ],
+    image: estate,
+    source_code_link: "https://github.com/Salvar77/react-native-estate",
   },
 ];
 
