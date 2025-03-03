@@ -39,6 +39,7 @@ import gwat from "./company/gallery57.webp";
 import cobra from "./company/caseCobra.webp";
 import library from "./company/library.webp";
 import estate from "./company/estate.webp";
+import awards from "./company/awwwards.webp";
 
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
@@ -93,4 +94,5 @@ export {
   library,
   vercel,
   estate,
+  awards,
 };

@@ -39,6 +39,7 @@ import {
   cobra,
   library,
   estate,
+  awards,
 } from "../assets";
 
 export const navLinks = [
@@ -396,6 +397,28 @@ const projects = [
     ],
     image: estate,
     source_code_link: "https://github.com/Salvar77/react-native-estate",
+  },
+  {
+    name: "MotionAwwwards",
+    description:
+      "Strona w stylu awwwards, zbudowana przy użyciu React, Tailwind CSS oraz GSAP, charakteryzująca się płynnymi animacjami i nowoczesnym interfejsem. Dzięki precyzyjnie zsynchronizowanym efektom przejścia, użytkownicy mogą doświadczać interaktywnej nawigacji i dynamicznej prezentacji treści. Zastosowanie GSAP gwarantuje wysoką wydajność oraz atrakcyjną oprawę wizualną, sprawiając, że strona pozostaje w pamięci odwiedzających.",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "tailwind",
+        color: "green-text-gradient",
+      },
+      {
+        name: "gsap",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: awards,
+    source_code_link: "https://github.com/Salvar77/react-native-estate",
+    vercel_link: "https://awwwards-omega.vercel.app/",
   },
 ];
 

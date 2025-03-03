@@ -15,7 +15,7 @@ const PrivacyPolicyPage = () => {
       <h2>2. Administrator Danych Osobowych</h2>
       <p>
         Administratorem danych osobowych zawartych w serwisie jest Łukasz Kuś
-        Search IT z siedzibą na ul. Wojska Polskiego 1-3/40, 45-862 Opole, NIP:
+        Search IT z siedzibą na ul. Wojska Polskiego 1/40, 45-862 Opole, NIP:
         7543364000, REGON: 526760554.
       </p>
 
