@@ -78,7 +78,7 @@ const Works = () => {
   const visibleProjects = isIPhone
     ? projects.slice(0, 3)
     : isAndroid
-    ? projects.slice(0, 4)
+    ? projects.slice(0, 3)
     : projects;
 
   return (
