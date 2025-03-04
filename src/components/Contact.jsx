@@ -19,11 +19,27 @@ const Contact = () => {
   const [consent, setConsent] = useState(false);
   const [showModal, setShowModal] = useState(false);
   const [messageStatus, setMessageStatus] = useState(null);
+  const [errors, setErrors] = useState({});
+
+  const validateForm = () => {
+    let newErrors = {};
+    if (!form.name.trim()) newErrors.name = "Imię jest wymagane.";
+    if (!form.email.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) {
+      newErrors.email = "Wprowadź poprawny adres email.";
+    }
+    if (!form.message.trim())
+      newErrors.message = "Wiadomość nie może być pusta.";
+    if (!consent)
+      newErrors.consent = "Musisz wyrazić zgodę na przetwarzanie danych.";
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-
     setForm({ ...form, [name]: value });
+    setErrors({ ...errors, [name]: "" });
   };
 
   const closeModal = () => {
@@ -33,6 +49,7 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (!validateForm()) return;
     setLoading(true);
 
     emailjs
@@ -90,6 +107,7 @@ const Contact = () => {
                 placeholder="Jakie jest twoje imię?"
                 className={classes.input}
               />
+              {errors.name && <p className={classes.error}>{errors.name}</p>}
             </label>
             <label className={classes.label}>
               <span className={classes.labelText}>Twój Email</span>
@@ -101,6 +119,7 @@ const Contact = () => {
                 placeholder="Jaki jest twój email?"
                 className={classes.input}
               />
+              {errors.email && <p className={classes.error}>{errors.email}</p>}
             </label>
             <label className={classes.label}>
               <span className={classes.labelText}>Twoja wiadomość</span>
@@ -112,6 +131,9 @@ const Contact = () => {
                 placeholder="Co chcesz powiedzieć?"
                 className={classes.textarea}
               />
+              {errors.message && (
+                <p className={classes.error}>{errors.message}</p>
+              )}
             </label>
             <div className={classes.consentWrapper}>
               <input
@@ -131,6 +153,9 @@ const Contact = () => {
                 Administratorem danych osobowych jest Łukasz Kuś Search IT, ul.
                 Wojska Polskiego 1/40, 46-862 Opole.
               </label>
+              {errors.consent && (
+                <p className={classes.error}>{errors.consent}</p>
+              )}
             </div>
             <button type="submit" className={classes.button}>
               {loading ? "Wysyłanie..." : "Wyślij"}

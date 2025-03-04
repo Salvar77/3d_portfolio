@@ -12,8 +12,6 @@ const ContactBubble = () => {
         isExpanded ? classes.expanded : ""
       }`}
       onClick={handleToggle}
-      onMouseEnter={() => setIsExpanded(true)}
-      onMouseLeave={() => setIsExpanded(false)}
     >
       <div className={classes.bubbleContent}>
         <svg
