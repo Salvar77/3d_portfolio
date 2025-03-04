@@ -9,8 +9,7 @@ import { projects } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
 import classes from "./Works.module.scss";
 
-const isIPhone = /iPhone|iPad|iPod/i.test(navigator.userAgent);
-const isAndroid = /Android/i.test(navigator.userAgent);
+const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
 const ProjectCard = ({
   index,
@@ -23,63 +22,116 @@ const ProjectCard = ({
 }) => {
   return (
     <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
-      <Tilt
-        options={{
-          max: 45,
-          scale: 1,
-          speed: 450,
-        }}
-        className={classes.projectCard}
-      >
-        <div className={classes.projectImageContainer}>
-          <img
-            src={image}
-            alt={name}
-            className={classes.projectImage}
-            loading="lazy"
-          />
+      {isMobile ? (
+        <div className={classes.projectCard}>
+          <div className={classes.projectImageContainer}>
+            <img
+              src={image}
+              alt={name}
+              className={classes.projectImage}
+              loading="lazy"
+            />
 
-          <div className={classes.cardImageHover}>
-            {vercel_link && (
+            <div className={classes.cardImageHover}>
+              {vercel_link && (
+                <div
+                  onClick={() => window.open(vercel_link, "_blank")}
+                  className={classes.vercelIconContainer}
+                >
+                  <img
+                    src={vercel}
+                    alt="vercel"
+                    className={classes.vercelIcon}
+                  />
+                </div>
+              )}
               <div
-                onClick={() => window.open(vercel_link, "_blank")}
-                className={classes.vercelIconContainer}
+                onClick={() => window.open(source_code_link, "_blank")}
+                className={classes.githubIconContainer}
               >
-                <img src={vercel} alt="vercel" className={classes.vercelIcon} />
+                <img src={github} alt="github" className={classes.githubIcon} />
               </div>
-            )}
-            <div
-              onClick={() => window.open(source_code_link, "_blank")}
-              className={classes.githubIconContainer}
-            >
-              <img src={github} alt="github" className={classes.githubIcon} />
             </div>
           </div>
-        </div>
 
-        <div className={classes.projectInfo}>
-          <h3 className={classes.projectTitle}>{name}</h3>
-          <p className={classes.projectDescription}>{description}</p>
-        </div>
+          <div className={classes.projectInfo}>
+            <h3 className={classes.projectTitle}>{name}</h3>
+            <p className={classes.projectDescription}>{description}</p>
+          </div>
 
-        <div className={classes.projectTags}>
-          {tags.map((tag) => (
-            <p key={tag.name} className={`${classes.projectTag} ${tag.color}`}>
-              #{tag.name}
-            </p>
-          ))}
+          <div className={classes.projectTags}>
+            {tags.map((tag) => (
+              <p
+                key={tag.name}
+                className={`${classes.projectTag} ${tag.color}`}
+              >
+                #{tag.name}
+              </p>
+            ))}
+          </div>
         </div>
-      </Tilt>
+      ) : (
+        <Tilt
+          options={{
+            max: 45,
+            scale: 1,
+            speed: 450,
+          }}
+          className={classes.projectCard}
+        >
+          <div className={classes.projectImageContainer}>
+            <img
+              src={image}
+              alt={name}
+              className={classes.projectImage}
+              loading="lazy"
+            />
+
+            <div className={classes.cardImageHover}>
+              {vercel_link && (
+                <div
+                  onClick={() => window.open(vercel_link, "_blank")}
+                  className={classes.vercelIconContainer}
+                >
+                  <img
+                    src={vercel}
+                    alt="vercel"
+                    className={classes.vercelIcon}
+                  />
+                </div>
+              )}
+              <div
+                onClick={() => window.open(source_code_link, "_blank")}
+                className={classes.githubIconContainer}
+              >
+                <img src={github} alt="github" className={classes.githubIcon} />
+              </div>
+            </div>
+          </div>
+
+          <div className={classes.projectInfo}>
+            <h3 className={classes.projectTitle}>{name}</h3>
+            <p className={classes.projectDescription}>{description}</p>
+          </div>
+
+          <div className={classes.projectTags}>
+            {tags.map((tag) => (
+              <p
+                key={tag.name}
+                className={`${classes.projectTag} ${tag.color}`}
+              >
+                #{tag.name}
+              </p>
+            ))}
+          </div>
+        </Tilt>
+      )}
     </motion.div>
   );
 };
 
 const Works = () => {
-  const visibleProjects = isIPhone
-    ? projects.slice(0, 3)
-    : isAndroid
-    ? projects.slice(0, 3)
-    : projects;
+  const visibleProjects = isMobile ? projects.slice(0, 6) : projects;
 
   return (
     <>
