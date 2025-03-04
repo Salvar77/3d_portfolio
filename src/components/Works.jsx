@@ -131,7 +131,7 @@ const ProjectCard = ({
 };
 
 const Works = () => {
-  const visibleProjects = isMobile ? projects.slice(0, 6) : projects;
+  const visibleProjects = isMobile ? projects.slice(0, 3) : projects;
 
   return (
     <>
