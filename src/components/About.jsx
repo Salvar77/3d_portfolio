@@ -6,37 +6,26 @@ import { services } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
 import { SectionWrapper } from "../hoc";
 
-const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-
 const ServiceCard = ({ index, title, icon }) => {
   return (
-    <motion.div
-      variants={fadeIn("right", "spring", 0.5 * index, 0.75)}
-      className={classes.gradientBorder}
-    >
-      {isMobile ? (
-        <div className={classes.serviceCard}>
-          <div className={classes.cardContent}>
-            <img src={icon} alt={title} />
-            <h3>{title}</h3>
-          </div>
-        </div>
-      ) : (
-        <Tilt
+    <Tilt className={classes.serviceCard}>
+      <motion.div
+        variants={fadeIn("right", "spring", 0.5 * index, 0.75)}
+        className={classes.gradientBorder}
+      >
+        <div
           options={{
             max: 45,
             scale: 1,
             speed: 450,
           }}
-          className={classes.serviceCard}
+          className={classes.cardContent}
         >
-          <div className={classes.cardContent}>
-            <img src={icon} alt={title} />
-            <h3>{title}</h3>
-          </div>
-        </Tilt>
-      )}
-    </motion.div>
+          <img src={icon} alt={title} />
+          <h3>{title}</h3>
+        </div>
+      </motion.div>
+    </Tilt>
   );
 };
 
