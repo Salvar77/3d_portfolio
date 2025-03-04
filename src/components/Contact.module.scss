@@ -22,6 +22,10 @@
   border-radius: 1.25rem;
   grid-column: 1 / 2;
   grid-row: 1;
+
+  @media (min-width: 992px) {
+    padding: 2rem;
+  }
 }
 
 .form {
