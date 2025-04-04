@@ -78,8 +78,8 @@ export default function App() {
   return (
     <BrowserRouter>
       <SEO
-        title="Search IT | Strony i Sklepy Internetowe"
-        description="Nowoczesne strony internetowe i sklepy e-commerce..."
+        title="Search IT | Strony i Sklepy Internetowe Opole"
+        description="Nowoczesne strony internetowe i sklepy e-commerce stworzone w React i Next.js - Opole. Szybkie, responsywne i zoptymalizowane pod SEO."
         image="https://www.searchit.pl/logofav5.webp"
         url="https://www.searchit.pl"
       />

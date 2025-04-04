@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import classes from "./Hero.module.scss";
 import { styles } from "../styles";
-import { ComputersCanvas } from "./canvas";
-import { isAndroid } from "react-device-detect";
+// import { ComputersCanvas } from "./canvas";
+// import { isAndroid } from "react-device-detect";
 
 const Hero = () => {
   const [isMobile, setIsMobile] = useState(false);
