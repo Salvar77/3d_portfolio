@@ -71,6 +71,7 @@ const SEO = () => (
             "https://aleo.com/pl/firma/lukasz-kus-search-it",
             "https://useme.com/pl/roles/contractor/search-it,387103/",
             "https://panoramafirm.pl/opolskie,,opole,wojska_polskiego,1_3_lok._40/lukasz_kus_search_it-bowyhg_fph.html",
+            "https://www.gowork.pl/opinie_czytaj,25128869",
           ],
           makesOffer: [
             {
