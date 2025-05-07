@@ -20,7 +20,6 @@ const SEO = () => (
     <meta property="og:image" content="https://www.searchit.pl/logofav5.webp" />
     <meta property="og:url" content="https://www.searchit.pl" />
     <meta property="og:type" content="website" />
-    <meta property="fb:app_id" content="1234567890" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta
       name="twitter:title"
