@@ -40,6 +40,8 @@ import {
   library,
   estate,
   awards,
+  dogwalker,
+  mkstudio,
 } from "../assets";
 
 export const navLinks = [
@@ -173,6 +175,21 @@ const realizations = [
     description: "Pomiary elektryczne oraz serwis instalacji fotowoltaicznych",
     image: gwat,
     link: "https://www.g-wat.pl/",
+  },
+  {
+    title: "Dog Walker",
+    icon: logo2,
+    description: "Rewolucja w globalnym rynku wyprowadzania psów",
+    image: dogwalker,
+    link: "https://www.dog-walker.io/",
+  },
+  {
+    title: "MK Studio Auto Detailing",
+    icon: logo2,
+    description:
+      "MK Studio Auto detailing - Pranie tapicerki - Korekta lakieru ",
+    image: mkstudio,
+    link: "https://www.mkstudio.opole.pl/",
   },
 ];
 

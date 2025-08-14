@@ -36,6 +36,8 @@ import seasun from "./company/seasun.webp";
 import fazar from "./company/FazarSvg.webp";
 import fazar2 from "./company/vcardSvg.svg";
 import gwat from "./company/gallery57.webp";
+import dogwalker from "./company/dogwalker.webp";
+import mkstudio from "./company/logo-mkstudio-auto-detailing-opole.webp";
 import cobra from "./company/caseCobra.webp";
 import library from "./company/library.webp";
 import estate from "./company/estate.webp";
@@ -95,4 +97,6 @@ export {
   vercel,
   estate,
   awards,
+  dogwalker,
+  mkstudio,
 };
