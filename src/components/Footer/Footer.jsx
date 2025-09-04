@@ -11,7 +11,7 @@ const Footer = () => {
         <div className={classes.footer__text}>
           <p>
             Ul. Wojska Polskiego 1/40, 45-862 Opole | Tel: +48 694 004 530 |{" "}
-            <a href="mailto:lukaszkus77@gmail.com">contact@searchit.pl</a>
+            <a href="mailto:contact@searchit.pl">contact@searchit.pl</a>
           </p>
         </div>
 
