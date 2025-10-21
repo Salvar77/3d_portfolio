@@ -434,7 +434,7 @@ const projects = [
       },
     ],
     image: awards,
-    source_code_link: "https://github.com/Salvar77/react-native-estate",
+    source_code_link: "https://github.com/Salvar77/awwwards",
     vercel_link: "https://awwwards-omega.vercel.app/",
   },
 ];
