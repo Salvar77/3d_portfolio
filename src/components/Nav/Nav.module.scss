@@ -1,0 +1,143 @@
+@import "../../../styles/colors";
+
+.nav {
+  position: fixed;
+  top: 7rem;
+  right: 0;
+  height: 100vh;
+  text-align: center;
+  transform: translateX(100%);
+
+  &__show {
+    top: 9rem;
+    transform: translateX(0);
+    max-height: 100%;
+    background: linear-gradient(to bottom, #c0c0c0 30%, $primary-color 70%);
+    top: 80px;
+    right: 0;
+    margin-left: 1.6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 100;
+    border-top-left-radius: 0.8rem;
+    opacity: 0.9;
+    padding: 1rem;
+    transition: transform 0.3s ease-in-out;
+
+    .nav__item {
+      li {
+        border: 1px solid $primary-color;
+        margin: 0.7rem;
+        background-color: $primary-color;
+        border-radius: 0.4rem;
+
+        a {
+          width: 100%;
+          height: 100%;
+          padding: 1rem;
+          margin: 0.5rem;
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+
+  &__desktop {
+    transform: translateX(0);
+  }
+
+  &__container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 1rem 0;
+  }
+}
+
+.nav ul {
+  list-style: none;
+  padding: 1rem 0;
+}
+
+.nav ul li {
+  padding: 1rem;
+  color: $white-smooth;
+  text-align: center;
+  cursor: pointer;
+}
+
+.nav ul li a {
+  text-decoration: none;
+  color: $white-smooth;
+  transition: color 0.3s ease;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.nav ul li a:hover {
+  color: $violet-1;
+}
+
+@media (min-width: 768px) {
+  .nav ul li a {
+    font-size: 2rem;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .nav {
+    height: 6rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding-right: 3rem;
+    width: 100%;
+    transform: none;
+    top: 0;
+    background-color: $primary-color;
+    z-index: 1000;
+
+    &__show {
+      display: flex;
+    }
+
+    &::before,
+    &::after {
+      transition: 0.3s;
+    }
+
+    &__items {
+      margin: 0 1rem;
+
+      &:hover::before,
+      &:hover::after {
+        display: none;
+      }
+    }
+  }
+
+  .nav ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .nav ul li {
+    padding: 0 1rem;
+    color: $white-smooth;
+    text-align: center;
+    cursor: pointer;
+  }
+
+  .nav ul li a {
+    text-decoration: none;
+    color: $white-smooth;
+    transition: color 0.3s ease;
+    font-size: 1rem;
+    font-weight: bold;
+  }
+}

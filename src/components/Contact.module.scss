@@ -1,0 +1,167 @@
+@import "../styles/colors.scss";
+
+.contactContainer {
+  display: flex;
+  flex-direction: column-reverse;
+  flex-wrap: wrap;
+  overflow-x: hidden;
+  margin-bottom: 2rem;
+
+  @media (min-width: 1280px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: center;
+  }
+}
+
+.formContainer {
+  flex: 0.75;
+  background-color: $black-100;
+  padding: 1rem;
+  border-radius: 1.25rem;
+  grid-column: 1 / 2;
+  grid-row: 1;
+
+  @media (min-width: 992px) {
+    padding: 2rem;
+  }
+}
+
+.form {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.label {
+  display: flex;
+  flex-direction: column;
+}
+
+.labelText {
+  color: $white-100;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+.textarea {
+  height: 125px;
+}
+
+.input,
+.textarea {
+  background-color: $tertiary-color;
+  padding: 1rem 1.5rem;
+  color: $white-100;
+  border-radius: 0.5rem;
+  border: none;
+  font-weight: 500;
+  width: 100%;
+
+  &::placeholder {
+    color: $secondary-color;
+  }
+}
+
+.button {
+  background-color: $tertiary-color;
+  padding: 0.75rem 2rem;
+  outline: none;
+  width: fit-content;
+  color: $white-100;
+  font-weight: bold;
+  box-shadow: 0 4px 6px -1px $primary-color;
+  border-radius: 0.75rem;
+  width: 100%;
+}
+
+.consentWrapper {
+  padding: 0.5rem;
+  margin: 0.5rem;
+  text-align: center;
+  font-size: 1rem;
+  border: 1px solid rgba(61, 54, 54, 0.9);
+  box-shadow: 0.3rem 0.4rem 0.8rem rgba(235, 232, 232, 0.1);
+
+  input[type="checkbox"]:checked {
+    background-color: $blue-after;
+  }
+
+  label {
+    display: inline-block;
+    margin-left: 0.5rem;
+    font-size: 0.5rem;
+    color: $white-100;
+  }
+}
+
+.policy {
+  color: $white-smooth;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1rem;
+  justify-content: center;
+  box-shadow: 0.3rem 0.4rem 0.8rem rgba(235, 232, 232, 0.1);
+  padding: 1rem;
+  margin-bottom: 0.4rem;
+  text-align: center;
+
+  &__link {
+    text-decoration: none;
+    color: $violet-1;
+  }
+  span {
+    font-weight: bold;
+  }
+}
+
+.successMessage,
+.errorMessage {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $white-smooth;
+  font-size: 2rem;
+  text-align: center;
+  z-index: 1050;
+}
+
+.successMessage {
+  font-size: 1rem;
+  background-color: rgba(34, 139, 34, 0.9);
+
+  @media (min-width: 992px) {
+    font-size: 1.7rem;
+  }
+}
+
+.errorMessage {
+  font-size: 1rem;
+  background-color: rgba(220, 20, 60, 0.9);
+
+  @media (min-width: 992px) {
+    font-size: 1.7rem;
+  }
+}
+
+.canvasContainer {
+  height: 350px;
+  width: 100%;
+
+  @media (min-width: 768px) {
+    height: 550px;
+  }
+
+  @media (min-width: 1280px) {
+    flex: 1;
+
+    height: 91%;
+  }
+}

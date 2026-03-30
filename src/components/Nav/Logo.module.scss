@@ -1,0 +1,24 @@
+.logo {
+  position: fixed;
+  top: 2.1rem;
+  left: -2.5rem;
+  z-index: 10000;
+
+  img {
+    width: 9.375rem;
+    height: auto;
+  }
+}
+
+@media (min-width: 992px) {
+  .logo {
+    position: fixed;
+    left: -5rem;
+    top: -4.5rem;
+
+    img {
+      height: 20rem;
+      width: 20rem;
+    }
+  }
+}
