@@ -42,6 +42,9 @@ import cobra from "./company/caseCobra.webp";
 import library from "./company/library.webp";
 import estate from "./company/estate.webp";
 import awards from "./company/awwwards.webp";
+import frankedu from "./company/frankedu.png";
+import twokdetailing from "./company/2k-logo-white-bez-tla.png";
+import midapolska from "./company/skuteczna-mobilna-reklama-na-samochodach-taxi.webp";
 
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
@@ -99,4 +102,7 @@ export {
   awards,
   dogwalker,
   mkstudio,
+  twokdetailing,
+  frankedu,
+  midapolska,
 };

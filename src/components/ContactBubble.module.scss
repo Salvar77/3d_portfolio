@@ -12,7 +12,9 @@
   align-items: center;
   cursor: pointer;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.35);
-  transition: transform 0.3s ease, opacity 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
   opacity: 0.9;
   z-index: 1000;
 
@@ -38,7 +40,9 @@
     max-width: 0;
     overflow: hidden;
     white-space: nowrap;
-    transition: max-width 0.5s ease, opacity 0.5s ease;
+    transition:
+      max-width 0.5s ease,
+      opacity 0.5s ease;
     opacity: 0;
 
     .phoneNumber {
