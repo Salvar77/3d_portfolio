@@ -44,6 +44,7 @@ import {
   mkstudio,
   frankedu,
   twokdetailing,
+  midapolska,
 } from "../assets";
 
 export const navLinks = [
@@ -157,19 +158,42 @@ const realizations = [
     link: "https://www.frankedu.org/",
   },
   {
+    title: "Sea & Sun Sarbinowo",
+    icon: logo2,
+    description: "Nowo wybudowane, klimatyzowane, komfortowe domki na wynajem.",
+    image: seasun,
+    link: "https://www.seasunsarbinowo.pl/",
+  },
+  {
+    title: "Dog Walker",
+    icon: logo2,
+    description: "Rewolucja w globalnym rynku wyprowadzania psów",
+    image: dogwalker,
+    link: "https://www.dog-walker.io/",
+  },
+  {
+    title: "2K Auto Detailing",
+    icon: logo2,
+    description:
+      "Profesjonalne usługi Auto Detailingowe w Opolu. Korekta lakieru - Powłoka ceramiczna",
+    image: twokdetailing,
+    link: "https://www.2kdetailing.opole.pl/",
+  },
+  {
+    title: "Mida Polska",
+    icon: midapolska,
+    description:
+      "Innowacyjna platforma floty partnerskiej Taxi (Bolt, Uber, FREENOW). Autorski CMS.",
+    image: midapolska,
+    link: "https://www.mida-polska.pl/",
+  },
+  {
     title: "Kabe Tint&Leather",
     icon: logo2,
     description:
       "Usługi przyciemniania szyb samochodowych i regeneracji tapicerki skórzanej.",
     image: kabe,
     link: "https://www.kabetintleather.opole.pl/",
-  },
-  {
-    title: "Sea & Sun Sarbinowo",
-    icon: logo2,
-    description: "Nowo wybudowane, klimatyzowane, komfortowe domki na wynajem.",
-    image: seasun,
-    link: "https://www.seasunsarbinowo.pl/",
   },
   {
     title: "Fazar",
@@ -187,27 +211,12 @@ const realizations = [
     link: "https://www.g-wat.pl/",
   },
   {
-    title: "Dog Walker",
-    icon: logo2,
-    description: "Rewolucja w globalnym rynku wyprowadzania psów",
-    image: dogwalker,
-    link: "https://www.dog-walker.io/",
-  },
-  {
     title: "MK Studio Auto Detailing",
     icon: logo2,
     description:
       "MK Studio Auto detailing - Pranie tapicerki - Korekta lakieru ",
     image: mkstudio,
     link: "https://www.mkstudio.opole.pl/",
-  },
-  {
-    title: "2K Auto Detailing",
-    icon: logo2,
-    description:
-      "Profesjonalne usługi Auto Detailingowe w Opolu. Korekta lakieru - Powłoka ceramiczna",
-    image: twokdetailing,
-    link: "https://www.2kdetailing.opole.pl/",
   },
 ];
 
