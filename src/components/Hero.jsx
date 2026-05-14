@@ -30,12 +30,15 @@ const Hero = () => {
         </div>
         <div>
           <h1 className={`${styles.heroHeadText} text-white`}>
-            Witam, jestem {isMobile ? <br /> : null}
-            <span style={{ color: "#915eff" }}>Łukasz</span>
+            Projektuję. {isMobile ? <br /> : null}
+            <span className={classes.violetText}>
+              Koduję. {isMobile ? <br /> : null}
+              Wdrażam.
+            </span>
           </h1>
           <p className={`${styles.heroSubText} mt-2 text-white-100`}>
             Tworzę nowoczesne strony, <br />
-            aplikacje internetowe i interfejsy użytkownika.
+            aplikacje internetowe i interfejsy.
           </p>
         </div>
       </div>

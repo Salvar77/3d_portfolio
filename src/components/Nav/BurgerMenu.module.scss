@@ -70,14 +70,20 @@
   background-color: $white-smooth;
   border-radius: 4px;
   position: absolute;
-  transition-property: transform;
-  transition-duration: 0.15s;
+  transition-property: transform, background-color;
+  transition-duration: 0.15s, 0.3s;
   transition-timing-function: ease;
 }
 
 .hamburgerInner::before {
   right: 0;
   width: 70%;
+}
+
+.violetIcon .hamburgerInner,
+.violetIcon .hamburgerInner::before,
+.violetIcon .hamburgerInner::after {
+  background-color: $violet-1 !important;
 }
 
 .hamburgerInner::before,

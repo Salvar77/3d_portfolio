@@ -94,7 +94,12 @@ const Experience = () => {
 
   return (
     <>
-      <motion.div variants={textVariant()}>
+      <motion.div
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.25 }}
+        variants={textVariant()}
+      >
         <p className={styles.sectionSubText}>Zrealizowane Projekty</p>
         <h2 className={styles.sectionHeadText}>Realizacje</h2>
       </motion.div>
