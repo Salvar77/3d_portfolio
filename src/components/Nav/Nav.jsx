@@ -33,7 +33,9 @@ const Nav = ({ isOpen, toggleNav }) => {
     setTimeout(() => {
       const section = document.getElementById(link.id);
       if (section) {
-        section.scrollIntoView({ behavior: "smooth" });
+        const yOffset = -100; 
+        const y = section.getBoundingClientRect().top + window.scrollY + yOffset;
+        window.scrollTo({ top: y, behavior: "smooth" });
       }
     }, 100);
   };
