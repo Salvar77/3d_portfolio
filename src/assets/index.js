@@ -25,7 +25,7 @@ import threejs from "./tech/threejs.png";
 import stripe from "./tech/StripeLogoRed.png";
 import Ai from "./tech/Ai.png";
 import Ai2 from "./tech/Ai2.png";
-import Ps from "./tech/Ps.png";
+import Ps from "./tech/Ps.webp";
 
 import meta from "./company/meta.png";
 import shopify from "./company/shopify.png";
@@ -42,13 +42,13 @@ import cobra from "./company/caseCobra.webp";
 import library from "./company/library.webp";
 import estate from "./company/estate.webp";
 import awards from "./company/awwwards.webp";
-import frankedu from "./company/frankedu.png";
-import twokdetailing from "./company/2k-logo-white-bez-tla.png";
+import frankedu from "./company/frankedu.webp";
+import twokdetailing from "./company/2k-logo-white-bez-tla.webp";
 import midapolska from "./company/skuteczna-mobilna-reklama-na-samochodach-taxi.webp";
 
-import carrent from "./carrent.png";
-import jobit from "./jobit.png";
-import tripguide from "./tripguide.png";
+import carrent from "./carrent.webp";
+import jobit from "./jobit.webp";
+import tripguide from "./tripguide.webp";
 import eadmin from "./image1.webp";
 import efront from "./efinal1.webp";
 import universe from "./universe.webp";

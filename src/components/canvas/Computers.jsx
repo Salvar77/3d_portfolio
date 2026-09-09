@@ -49,7 +49,7 @@ const ComputerCanvas = () => {
 
   return (
     <Canvas
-      frameloop="always"
+      frameloop="demand"
       shadows
       camera={{ position: [20, 3, 5], fov: 25 }}
       gl={{ preserveDrawingBuffer: true }}
@@ -62,7 +62,7 @@ const ComputerCanvas = () => {
         />
         <Computers isMobile={isMobile} />
       </Suspense>
-      <Preload all />
+
     </Canvas>
   );
 };
