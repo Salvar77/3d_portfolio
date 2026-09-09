@@ -21,7 +21,7 @@ const ProjectCard = ({
   vercel_link,
 }) => {
   return (
-    <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
+    <motion.div variants={fadeIn("up", "spring", index * 0.15, 0.75)}>
       {isMobile ? (
         <div className={classes.projectCard}>
           <div className={classes.projectImageContainer}>
